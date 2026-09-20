@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#1554e6">
+<title>Nhận Lập Trình Uy Tín Chất Lượng</title>
+<meta name="description" content="Nhận Lập Trình Uy Tín Chất Lượng - Nhận làm web theo yêu cầu, giá từ 150k. Liên hệ Zalo 0368910922.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1554e6;
+  --blue-dark:#0c3aa8;
+  --blue-soft:#e8f1ff;
+  --blue-mist:#f4f8ff;
+  --sky:#38a0ff;
+  --navy:#0b1f44;
+  --text:#33456b;
+  --muted:#65789c;
+  --line:#dbe6f7;
+  --shadow:0 18px 50px -18px rgba(21,84,230,.28);
+  --shadow-sm:0 8px 24px -10px rgba(21,84,230,.25);
+  --ease:cubic-bezier(.22,.8,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  background:#fff;
+  color:var(--text);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:saturate(180%) blur(16px);
+  -webkit-backdrop-filter:saturate(180%) blur(16px);
+  border-bottom:1px solid var(--line);
+  padding-top:env(safe-area-inset-top,0px);
+  transition:box-shadow .3s var(--ease);
+}
+header.scrolled{box-shadow:0 10px 30px -18px rgba(11,31,68,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy);font-size:1.08rem}
+.brand-mark{
+  width:40px;height:40px;border-radius:12px;
+  background:linear-gradient(140deg,#0c3aa8 0%,var(--blue) 55%,var(--sky) 100%);
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 8px 20px -8px rgba(21,84,230,.8),inset 0 1px 0 rgba(255,255,255,.35);
+}
+.brand-mark svg{width:22px;height:22px}
+.menu{display:flex;align-items:center;gap:4px;list-style:none}
+.menu a{
+  display:block;padding:10px 16px;border-radius:10px;
+  font-weight:600;font-size:.95rem;color:var(--text);
+  transition:background .25s var(--ease),color .25s var(--ease);
+}
+.menu a:hover{background:var(--blue-soft);color:var(--blue)}
+.menu .cta{
+  display:flex;align-items:center;gap:8px;margin-left:8px;
+  background:var(--blue);color:#fff;box-shadow:var(--shadow-sm);
+}
+.menu .cta:hover{background:var(--blue-dark);color:#fff}
+.menu .cta img{width:24px;height:24px;border-radius:7px;background:#fff}
+.burger{
+  display:none;width:44px;height:44px;border-radius:12px;cursor:pointer;
+  border:1px solid var(--line);background:#fff;color:var(--navy);
+  align-items:center;justify-content:center;
+}
+.burger svg{width:22px;height:22px}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 30px;border-radius:14px;font-weight:700;font-size:1rem;
+  border:2px solid transparent;cursor:pointer;font-family:inherit;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .25s,border-color .25s,color .25s;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn img{width:26px;height:26px;border-radius:7px;background:#fff}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 30px -12px rgba(21,84,230,.7)}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-white{background:#fff;color:var(--blue);box-shadow:0 14px 30px -14px rgba(11,31,68,.5)}
+.btn-white:hover{background:var(--blue-soft)}
+.btn-line{background:#fff;color:var(--blue);border-color:var(--line)}
+.btn-line:hover{border-color:var(--blue);background:var(--blue-mist)}
+
+.hero{
+  position:relative;
+  padding:130px 0 96px;
+  background-color:var(--blue-soft);
+  background-image:
+    linear-gradient(90deg,#fff 0%,rgba(255,255,255,.95) 36%,rgba(232,241,255,.6) 68%,rgba(232,241,255,.25) 100%),
+    var(--bg,none);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:8px 16px;border-radius:999px;
+  background:var(--blue-soft);color:var(--blue);
+  font-weight:600;font-size:.9rem;margin-bottom:24px;
+  border:1px solid #c8dcff;
+}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--blue);display:block}
+.hero h1{
+  font-size:clamp(2.2rem,5.2vw,3.9rem);
+  line-height:1.12;font-weight:800;color:var(--navy);
+  letter-spacing:-.025em;margin-bottom:22px;
+}
+.hero p.lead{font-size:1.15rem;color:var(--text);max-width:540px;margin-bottom:34px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
+.chips a{
+  display:block;padding:14px 16px;border-radius:16px;
+  background:rgba(255,255,255,.92);border:1px solid var(--line);
+  box-shadow:var(--shadow-sm);
+  transition:transform .3s var(--ease),border-color .3s,box-shadow .3s var(--ease);
+}
+.chips a:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:var(--shadow)}
+.chips small{display:block;font-size:.82rem;color:var(--muted);line-height:1.3}
+.chips strong{display:inline;font-size:1.35rem;font-weight:800;color:var(--blue);letter-spacing:-.02em;line-height:1.3}
+.chips s{font-size:.8rem;color:var(--muted);margin-left:6px;font-weight:500}
+.chips .hot s{color:#c3d8ff}
+.chips .hot{background:linear-gradient(150deg,var(--blue),var(--blue-dark));border-color:transparent}
+.chips .hot small{color:#c3d8ff}
+.chips .hot strong{color:#fff}
+
+.devices{position:relative;width:100%;padding-bottom:64px}
+.laptop{position:relative;width:100%}
+.laptop-screen{
+  position:relative;aspect-ratio:16/10;
+  background:#0b1f44;border:9px solid #0b1f44;border-radius:18px 18px 4px 4px;
+  overflow:hidden;box-shadow:var(--shadow);
+}
+.laptop-base{
+  height:14px;margin:0 -4%;
+  background:linear-gradient(180deg,#d7e3f7,#aebfdc);
+  border-radius:0 0 18px 18px;
+  box-shadow:0 22px 30px -14px rgba(11,31,68,.45);
+}
+.phone{
+  position:absolute;right:-2%;bottom:0;width:27%;
+  background:#0b1f44;border:7px solid #0b1f44;border-radius:28px;
+  overflow:hidden;box-shadow:0 24px 50px -16px rgba(11,31,68,.6);
+}
+.phone .screen{aspect-ratio:9/19}
+.screen{position:relative;background:#fff;overflow:hidden}
+.screen.fill{position:absolute;inset:0}
+.screen iframe{position:absolute;top:0;left:0;border:0;transform-origin:top left;pointer-events:none;background:#fff}
+.screen .cover{position:absolute;inset:0;z-index:2}
+
+section{padding:100px 0}
+.head{max-width:640px;margin-bottom:56px}
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.head h2{
+  font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.18;color:var(--navy);
+  font-weight:800;letter-spacing:-.02em;margin-bottom:14px;
+}
+.head p{color:var(--muted);font-size:1.06rem}
+
+.works{padding-top:100px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.grid-2.one{grid-template-columns:minmax(0,760px);justify-content:center}
+.work{
+  position:relative;min-height:440px;border-radius:26px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:38px;color:#fff;isolation:isolate;
+  box-shadow:var(--shadow);
+}
+.work::before{
+  content:'';position:absolute;inset:0;z-index:-2;
+  background-color:var(--blue-dark);
+  background-image:var(--bg,linear-gradient(135deg,#1554e6,#0b1f44));
+  background-size:cover;background-position:center;
+  transition:transform .9s var(--ease);
+}
+.work::after{
+  content:'';position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,31,68,.05) 0%,rgba(11,31,68,.55) 55%,rgba(8,26,72,.94) 100%);
+}
+.work:hover::before{transform:scale(1.07)}
+.work h3{font-size:1.75rem;font-weight:800;margin-bottom:10px;letter-spacing:-.01em}
+.work p{color:#dbe8ff;margin-bottom:24px;max-width:460px}
+.work .btn{align-self:flex-start;padding:14px 26px}
+
+.services{
+  background-color:var(--blue-soft);
+  background-image:linear-gradient(180deg,rgba(244,248,255,.96),rgba(232,241,255,.97)),var(--bg,none);
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service{
+  padding:32px;border-radius:22px;background:#fff;
+  border:1px solid var(--line);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;
+}
+.service:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#b9d1fb}
+.service .ic{
+  width:56px;height:56px;border-radius:16px;margin-bottom:22px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--sky));color:#fff;
+}
+.service svg{width:27px;height:27px}
+.service h3{color:var(--navy);font-size:1.18rem;font-weight:700;margin-bottom:8px}
+.service p{color:var(--muted);font-size:.97rem}
+
+.steps{padding:90px 0}
+.step-row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.step{padding:28px 26px;border-radius:20px;background:var(--blue-mist);border:1px solid var(--line);counter-increment:s}
+.step::before{
+  content:counter(s);
+  display:grid;place-items:center;width:40px;height:40px;border-radius:50%;
+  background:var(--blue);color:#fff;font-weight:800;margin-bottom:16px;
+}
+.step h3{color:var(--navy);font-size:1.08rem;font-weight:700;margin-bottom:6px}
+.step p{font-size:.94rem;color:var(--muted)}
+
+.pricing{
+  padding-top:84px;
+  background-color:var(--blue-soft);
+  background-image:linear-gradient(180deg,rgba(255,255,255,.93),rgba(232,241,255,.95)),var(--bg,none);
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:stretch}
+.plan{
+  position:relative;display:flex;flex-direction:column;
+  padding:34px 28px;border-radius:24px;background:#fff;
+  border:1px solid var(--line);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.plan:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.plan.pro{
+  background:linear-gradient(165deg,var(--blue) 0%,var(--blue-dark) 100%);
+  border-color:transparent;color:#dbe8ff;
+  box-shadow:0 28px 60px -20px rgba(21,84,230,.7);
+}
+.plan .tag{
+  position:absolute;top:-15px;left:50%;transform:translateX(-50%);
+  background:#fff;color:var(--blue);font-weight:700;font-size:.82rem;
+  padding:6px 18px;border-radius:999px;white-space:nowrap;
+  box-shadow:var(--shadow-sm);border:1px solid var(--line);
+}
+.plan h3{color:var(--navy);font-size:1.22rem;font-weight:700;margin-bottom:6px}
+.plan.pro h3{color:#fff}
+.plan .desc{font-size:.93rem;color:var(--muted);margin-bottom:22px;min-height:46px}
+.plan.pro .desc{color:#c3d8ff}
+.price{color:var(--blue);font-size:2.5rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.plan.pro .price{color:#fff}
+.plan ul{list-style:none;margin:26px 0 30px;flex:1}
+.plan li{position:relative;padding-left:30px;margin-bottom:13px;font-size:.95rem}
+.plan li::before{
+  content:'';position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;
+  background:var(--blue-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231554e6' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat;
+}
+.plan.pro li::before{
+  background-color:rgba(255,255,255,.2);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E");
+}
+.plan .btn{width:100%;padding:15px 20px}
+.note{text-align:center;color:var(--muted);margin-top:36px;font-size:.95rem}
+
+.contact{padding:90px 0}
+.contact-box{
+  position:relative;overflow:hidden;isolation:isolate;
+  display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center;
+  padding:56px;border-radius:30px;color:#fff;
+  box-shadow:0 30px 70px -28px rgba(21,84,230,.8);
+}
+.contact-box::before{
+  content:'';position:absolute;inset:0;z-index:-1;
+  background-color:var(--blue);
+  background-image:linear-gradient(120deg,rgba(21,84,230,.95),rgba(12,58,168,.9)),var(--bg,none);
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+}
+.contact-box h2{font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.2;font-weight:800;margin-bottom:12px;letter-spacing:-.01em}
+.contact-box p{color:#d4e4ff;font-size:1.05rem}
+.contact-side{display:flex;flex-direction:column;gap:14px}
+.contact-side .btn{width:100%;font-size:1.05rem;padding:18px 24px}
+.phone-line{text-align:center;color:#d4e4ff;font-size:.95rem}
+.phone-line strong{color:#fff;font-size:1.2rem;letter-spacing:.02em}
+
+footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--blue-mist)}
+.foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;color:var(--muted);font-size:.93rem}
+.foot nav{display:flex;flex-wrap:wrap;gap:22px}
+.foot a{color:var(--blue);font-weight:500}
+.foot a:hover{color:var(--blue-dark);text-decoration:underline}
+
+.zalo-float{
+  position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:120;
+  width:62px;height:62px;border-radius:50%;
+  display:block;background:#fff;
+  box-shadow:0 14px 34px -8px rgba(0,104,255,.6);
+  transition:transform .3s var(--ease);
+}
+.zalo-float:hover{transform:scale(1.08)}
+.zalo-float img{width:100%;height:100%;border-radius:50%;object-fit:cover;animation:ring 2.6s ease-out infinite}
+@keyframes ring{
+  0%{box-shadow:0 0 0 0 rgba(0,104,255,.5)}
+  70%,100%{box-shadow:0 0 0 14px rgba(0,104,255,0)}
+}
+
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:1040px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero{
+    padding:112px 0 70px;
+    background-image:
+      linear-gradient(180deg,#fff 0%,rgba(255,255,255,.94) 45%,rgba(232,241,255,.7) 100%),
+      var(--bg,none);
+  }
+  .devices{display:none}
+  .grid-4{grid-template-columns:repeat(2,1fr);gap:30px 22px}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .step-row{grid-template-columns:repeat(2,1fr)}
+  .contact-box{grid-template-columns:1fr;padding:44px 36px}
+}
+@media (max-width:760px){
+  section{padding:72px 0}
+  .works{padding-top:72px}
+  .wrap{width:min(1180px,calc(100% - 32px))}
+  .nav{height:64px}
+  .burger{display:flex}
+  .menu{
+    position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:4px;
+    padding:14px 16px 18px;background:#fff;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 20px 30px -20px rgba(11,31,68,.4);
+    visibility:hidden;opacity:0;transform:translateY(-8px);
+    transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;
+  }
+  .menu.open{visibility:visible;opacity:1;transform:none}
+  .menu .cta{margin:8px 0 0;justify-content:center}
+  .hero{padding:96px 0 56px}
+  .chips{grid-template-columns:repeat(2,1fr);gap:10px;margin-top:26px}
+  .pricing{padding-top:56px}
+  .pricing .head{margin-bottom:38px}
+  .actions .btn{width:100%}
+  .grid-2,.grid-3,.grid-4,.step-row{grid-template-columns:1fr}
+  .work{min-height:380px;padding:28px}
+  .contact{padding:64px 0}
+  .contact-box{padding:34px 24px;border-radius:24px}
+  .foot{flex-direction:column;align-items:flex-start}
+  .zalo-float{width:56px;height:56px}
+}
+
+.chips s{display:inline}
+.meta{display:flex;align-items:center;gap:8px;min-height:30px;margin-top:10px}
+.meta .o{color:var(--muted);text-decoration:line-through;font-size:.95rem}
+.meta .b{font-style:normal;background:#ffece8;color:#e0391f;font-weight:700;font-size:.8rem;padding:3px 10px;border-radius:999px}
+.plan.pro .meta .o{color:#c3d8ff}
+.plan.pro .meta .b{background:rgba(255,255,255,.2);color:#fff}
+
+
+.vip{
+  color:#dbe8ff;
+  background-color:var(--navy);
+  background-image:linear-gradient(180deg,rgba(8,26,72,.94),rgba(11,31,68,.97)),var(--bg,none);
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+}
+.vip .head h2{color:#fff}
+.vip .head p{color:#a9c0e8}
+.vip-badge{
+  display:inline-block;padding:6px 16px;border-radius:999px;margin-bottom:16px;
+  background:rgba(245,185,66,.16);border:1px solid rgba(245,185,66,.55);
+  color:#f5b942;font-weight:600;font-size:.88rem;
+}
+.vcard{
+  position:relative;display:flex;flex-direction:column;
+  padding:34px 26px;border-radius:24px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  transition:transform .35s var(--ease),border-color .35s,box-shadow .35s var(--ease);
+}
+.vcard:hover{transform:translateY(-8px);border-color:#f5b942;box-shadow:0 26px 60px -26px rgba(245,185,66,.55)}
+.vcard.top{border-color:#f5b942;background:linear-gradient(165deg,rgba(245,185,66,.16),rgba(255,255,255,.05))}
+.vcard h3{color:#fff;font-size:1.3rem;font-weight:800}
+.vcard .region{color:#f5b942;font-weight:600;font-size:.95rem;margin:2px 0 18px}
+.vprice{color:#fff;font-size:2.4rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.regions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.regions span{padding:5px 12px;border-radius:999px;font-size:.82rem;border:1px solid rgba(255,255,255,.28);color:#b8cbee}
+.regions span.on{background:#f5b942;border-color:#f5b942;color:#241800;font-weight:700}
+.vcard .hint{font-size:.85rem;color:#93aad3;margin-top:10px}
+.vcard ul{list-style:none;margin:22px 0 28px;flex:1}
+.vcard li{position:relative;padding-left:30px;margin-bottom:13px;font-size:.95rem;color:#dbe8ff}
+.vcard li::before{
+  content:'';position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;
+  background:#f5b942 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23241800' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat;
+}
+.btn-gold{background:#f5b942;color:#241800;box-shadow:0 14px 30px -14px rgba(245,185,66,.8)}
+.btn-gold:hover{background:#ffcb63}
+.vcard .btn{width:100%;padding:15px 20px}
+
+
+.ev-only[hidden],.ev-off[hidden]{display:none!important}
+.pill-hot{background:#fff0ea;color:#e0391f;border-color:#ffc9b8;transition:border-color .25s}
+.pill-hot i{background:#ff3d54}
+.pill-hot:hover{border-color:#ff3d54}
+.shock{
+  display:flex;align-items:center;justify-content:space-between;gap:28px;
+  padding:30px 36px;border-radius:26px;margin-bottom:34px;color:#fff;
+  background:linear-gradient(120deg,#ff7a18 0%,#ff3d54 100%);
+  box-shadow:0 26px 54px -24px rgba(255,61,84,.75);
+}
+.shock-tag{display:inline-block;padding:5px 14px;border-radius:999px;background:rgba(255,255,255,.24);font-weight:700;font-size:.85rem;margin-bottom:10px}
+.shock h3{font-size:clamp(1.35rem,3vw,2rem);font-weight:800;line-height:1.25;letter-spacing:-.01em}
+.shock h3 s{opacity:.8;font-weight:600}
+.shock h3 b{font-size:1.25em}
+.shock p{margin-top:6px;opacity:.95}
+.shock .btn{color:#e0391f;white-space:nowrap}
+.shock .btn:hover{background:#fff4f0}
+.plan .tag-ev{background:linear-gradient(120deg,#ff7a18,#ff3d54);color:#fff;border-color:transparent}
+.plan.deal{border:2px solid #ff5a3d;box-shadow:0 24px 50px -22px rgba(255,61,84,.6)}
+.plan.deal .b{background:#ff3d54;color:#fff}
+
+@media (max-width:760px){
+  .shock{flex-direction:column;align-items:flex-start;padding:24px 20px;border-radius:22px;gap:18px;margin-bottom:28px}
+  .shock .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header id="top-bar">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Nhận Lập Trình">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14" y1="5" x2="10" y2="19"/></svg></span>
+      <span>Nhận Lập Trình</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#bang-gia">Bảng giá</a></li>
+      <li><a href="#goi-vip">Gói VIP</a></li>
+      <li><a href="#website">Web đã làm</a></li>
+      <li><a href="#dich-vu">Dịch vụ</a></li>
+      <li>
+        <a class="cta" href="https://zalo.me/0368910922" target="_blank" rel="noopener">
+          <img class="zalo-img" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png" alt="Zalo" width="24" height="24" referrerpolicy="no-referrer">
+          Liên hệ Zalo
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" data-bg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop|https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&w=1920|https://picsum.photos/id/1/1920/1080|https://picsum.photos/id/0/1920/1080|https://loremflickr.com/1920/1080/technology">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill ev-off"><i></i>Nhận làm web theo yêu cầu, giá từ 150k</span>
+      <a class="pill pill-hot ev-only" href="#bang-gia" hidden><i></i>Ưu đãi sốc: web nhỏ chỉ 50k, từ 20/09 đến 01/10</a>
+      <h1>Nhận Lập Trình Uy Tín Chất Lượng</h1>
+      <p class="lead">Thiết kế và lập trình website hiện đại, tải nhanh, hiển thị đẹp trên điện thoại, máy tính bảng và máy tính. Từ trang nhỏ đến web chuyên nghiệp cho cá nhân và doanh nghiệp.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a>
+        <a class="btn btn-line" href="https://zalo.me/0368910922" target="_blank" rel="noopener">
+          <img class="zalo-img" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">
+          Nhắn Zalo đặt web
+        </a>
+      </div>
+      <div class="chips">
+        <a href="#bang-gia" data-base="150000" data-event="50000"><small>Web nhỏ</small><strong class="p">150k</strong><s class="o"></s></a>
+        <a href="#bang-gia" data-base="250000"><small>Web vừa</small><strong class="p">250k</strong><s class="o"></s></a>
+        <a href="#bang-gia" data-base="350000"><small>Web lớn</small><strong class="p">350k</strong><s class="o"></s></a>
+        <a href="#bang-gia" class="hot" data-base="1000000"><small>Chuyên nghiệp</small><strong class="p">1 triệu</strong><s class="o"></s></a>
+      </div>
+    </div>
+
+    <div class="devices" aria-label="Xem trước website đã thực hiện">
+      <div class="laptop">
+        <div class="laptop-screen">
+          <div class="screen fill">
+            <iframe data-w="1280" width="1280" height="800" src="https://hoangdequyxuong0-eng.github.io/Web-HO-H-C/" title="Xem trước web ôn Hóa học" loading="lazy" tabindex="-1"></iframe>
+            <a class="cover" href="https://hoangdequyxuong0-eng.github.io/Web-HO-H-C/" target="_blank" rel="noopener" aria-label="Mở web ôn Hóa học"></a>
+          </div>
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+      <div class="phone">
+        <div class="screen">
+          <iframe data-w="390" width="390" height="820" src="https://hoangdequyxuong0-eng.github.io/Web-HO-H-C/" title="Xem trước web ôn Hóa học" loading="lazy" tabindex="-1"></iframe>
+          <a class="cover" href="https://hoangdequyxuong0-eng.github.io/Web-HO-H-C/" target="_blank" rel="noopener" aria-label="Mở web ôn Hóa học"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="bang-gia" data-bg="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1920&auto=format&fit=crop|https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&w=1920|https://picsum.photos/id/48/1920/1080|https://loremflickr.com/1920/1080/laptop">
+  <div class="wrap">
+    <div class="head center reveal">
+      <h2>Bảng giá làm web</h2>
+      <p>Chọn gói phù hợp với nhu cầu và ngân sách của bạn.</p>
+    </div>
+
+
+
+    <div class="shock ev-only" hidden>
+      <div class="shock-text">
+        <span class="shock-tag">Ưu đãi sốc</span>
+        <h3>Web nhỏ giảm từ <s>150k</s> còn chỉ <b>50k</b></h3>
+        <p>Áp dụng từ ngày 20/09 đến hết ngày 01/10/2026</p>
+      </div>
+      <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Nhận ưu đãi qua Zalo</a>
+    </div>
+
+    <div class="grid-4">
+      <div class="plan reveal" data-base="150000" data-event="50000">
+        <span class="tag tag-ev ev-only" hidden>Ưu đãi sốc</span>
+        <h3>Web nhỏ</h3>
+        <p class="desc">Trang đơn giản, gọn nhẹ</p>
+        <div class="price p"></div>
+        <div class="meta"><s class="o"></s><em class="b"></em></div>
+        <ul>
+          <li>1 trang giới thiệu</li>
+          <li>Hiển thị tốt trên điện thoại</li>
+          <li>Nút liên hệ Zalo</li>
+        </ul>
+        <a class="btn btn-line" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
+      </div>
+      <div class="plan reveal" data-base="250000">
+        <h3>Web vừa</h3>
+        <p class="desc">Đủ nội dung cho cá nhân, nhóm nhỏ</p>
+        <div class="price p"></div>
+        <div class="meta"><s class="o"></s><em class="b"></em></div>
+        <ul>
+          <li>Nhiều mục nội dung</li>
+          <li>Giao diện đẹp, có hình ảnh</li>
+          <li>Hiển thị tốt mọi thiết bị</li>
+          <li>Nút liên hệ Zalo</li>
+        </ul>
+        <a class="btn btn-line" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
+      </div>
+      <div class="plan reveal" data-base="350000">
+        <h3>Web lớn</h3>
+        <p class="desc">Nhiều trang, nhiều chức năng</p>
+        <div class="price p"></div>
+        <div class="meta"><s class="o"></s><em class="b"></em></div>
+        <ul>
+          <li>Nhiều trang liên kết nhau</li>
+          <li>Hiệu ứng và ảnh nền đẹp</li>
+          <li>Chức năng theo yêu cầu</li>
+          <li>Hỗ trợ đưa web lên mạng</li>
+        </ul>
+        <a class="btn btn-line" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
+      </div>
+      <div class="plan pro reveal" data-base="1000000">
+        <span class="tag">Được chọn nhiều nhất</span>
+        <h3>Web chuyên nghiệp</h3>
+        <p class="desc">Đầy đủ, thiết kế riêng cho bạn</p>
+        <div class="price p"></div>
+        <div class="meta"><s class="o"></s><em class="b"></em></div>
+        <ul>
+          <li>Thiết kế riêng theo ý tưởng</li>
+          <li>Nhiều trang, nhiều chức năng</li>
+          <li>Tối ưu tốc độ và giao diện</li>
+          <li>Hỗ trợ đưa web lên mạng</li>
+          <li>Hỗ trợ chỉnh sửa sau khi giao</li>
+        </ul>
+        <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
+      </div>
+    </div>
+    <p class="note">Gói VIP có giá cố định.</p>
+  </div>
+</section>
+
+<section class="vip" id="goi-vip" data-bg="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop|https://picsum.photos/id/1018/1920/1080|https://picsum.photos/id/1015/1920/1080|https://loremflickr.com/1920/1080/city,night">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="vip-badge">Không áp dụng giảm giá</span>
+      <h2>Gói VIP kèm vùng miền</h2>
+      <p>Web thiết kế riêng, nội dung và hình ảnh đúng theo vùng miền bạn cần phủ. Giá VIP cố định.</p>
+    </div>
+    <div class="grid-4">
+      <div class="vcard reveal">
+        <h3>VIP 1</h3>
+        <p class="region">Kèm 1 vùng miền</p>
+        <div class="vprice">2 triệu</div>
+        <div class="regions"><span>Miền Bắc</span><span>Miền Trung</span><span>Miền Nam</span></div>
+        <p class="hint">Chọn 1 trong 3 miền</p>
+        <ul>
+          <li>Thiết kế riêng theo thương hiệu</li>
+          <li>Nội dung, hình ảnh theo vùng miền đã chọn</li>
+          <li>Nhiều trang, chức năng theo yêu cầu</li>
+          <li>Hỗ trợ đưa web lên mạng</li>
+        </ul>
+        <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
+      </div>
+      <div class="vcard reveal">
+        <h3>VIP 2</h3>
+        <p class="region">Kèm 2 vùng miền</p>
+        <div class="vprice">4 triệu</div>
+        <div class="regions"><span>Miền Bắc</span><span>Miền Trung</span><span>Miền Nam</span></div>
+        <p class="hint">Chọn 2 trong 3 miền</p>
+        <ul>
+          <li>Thiết kế riêng theo thương hiệu</li>
+          <li>Nội dung, hình ảnh cho 2 vùng miền</li>
+          <li>Nhiều trang, chức năng theo yêu cầu</li>
+          <li>Hỗ trợ đưa web lên mạng</li>
+          <li>Ưu tiên hỗ trợ và chỉnh sửa</li>
+        </ul>
+        <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
+      </div>
+      <div class="vcard reveal">
+        <h3>VIP 3</h3>
+        <p class="region">Kèm cả 3 vùng miền</p>
+        <div class="vprice">5 triệu</div>
+        <div class="regions"><span class="on">Miền Bắc</span><span class="on">Miền Trung</span><span class="on">Miền Nam</span></div>
+        <p class="hint">Bắc, Trung, Nam đầy đủ</p>
+        <ul>
+          <li>Thiết kế riêng theo thương hiệu</li>
+          <li>Nội dung, hình ảnh cho cả 3 miền</li>
+          <li>Nhiều trang, chức năng theo yêu cầu</li>
+          <li>Hỗ trợ đưa web lên mạng</li>
+          <li>Ưu tiên hỗ trợ và chỉnh sửa</li>
+        </ul>
+        <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
+      </div>
+      <div class="vcard top reveal">
+        <h3>VIP 4</h3>
+        <p class="region">Kèm toàn quốc</p>
+        <div class="vprice">10 triệu</div>
+        <div class="regions"><span class="on">Toàn quốc</span></div>
+        <p class="hint">Phủ mọi vùng miền cả nước</p>
+        <ul>
+          <li>Thiết kế riêng cao cấp theo thương hiệu</li>
+          <li>Nội dung, hình ảnh toàn quốc</li>
+          <li>Nhiều trang, chức năng không giới hạn ý tưởng</li>
+          <li>Hỗ trợ đưa web lên mạng</li>
+          <li>Ưu tiên hỗ trợ cao nhất</li>
+        </ul>
+        <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="works" id="website">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Website tôi đã thực hiện</h2>
+      <p>Website đang hoạt động thật. Bấm vào để xem và dùng thử.</p>
+    </div>
+    <div class="grid-2 one">
+      <article class="work reveal" data-bg="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop|https://picsum.photos/id/1043/1200/900|https://picsum.photos/id/1039/1200/900|https://loremflickr.com/1200/900/laboratory">
+        <h3>Web ôn Hóa học</h3>
+        <p>Ôn tập kiến thức Hóa học gọn gàng, dễ học, dễ nhớ cho học sinh.</p>
+        <a class="btn btn-white" href="https://hoangdequyxuong0-eng.github.io/Web-HO-H-C/" target="_blank" rel="noopener">Mở web ôn Hóa</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="dich-vu" data-bg="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop|https://picsum.photos/id/20/1920/1080|https://picsum.photos/id/60/1920/1080|https://loremflickr.com/1920/1080/office">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Dịch vụ nhận làm web</h2>
+      <p>Bạn nói ý tưởng, tôi lo thiết kế và lập trình. Bấm Zalo để trao đổi trực tiếp.</p>
+    </div>
+    <div class="grid-3">
+      <div class="service reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>Lập trình web theo yêu cầu</h3>
+        <p>Làm đúng nội dung và chức năng bạn cần: web giới thiệu, bán hàng, học tập, tra cứu.</p>
+      </div>
+      <div class="service reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></div>
+        <h3>Đẹp trên mọi thiết bị</h3>
+        <p>Web tự co giãn vừa điện thoại, máy tính bảng, máy tính. Đọc dễ, bấm dễ, không vỡ khung.</p>
+      </div>
+      <div class="service reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Tải nhanh, chạy mượt</h3>
+        <p>Code gọn nhẹ, tối ưu tốc độ để người xem không phải chờ lâu.</p>
+      </div>
+      <div class="service reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg></div>
+        <h3>Hỗ trợ đưa web lên mạng</h3>
+        <p>Hướng dẫn đăng web lên internet để có đường link gửi bạn bè và khách hàng.</p>
+      </div>
+      <div class="service reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Chỉnh sửa và nâng cấp</h3>
+        <p>Nhận sửa lỗi, đổi giao diện, thêm chức năng cho web bạn đang có.</p>
+      </div>
+      <div class="service reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Tư vấn qua Zalo</h3>
+        <p>Trao đổi trực tiếp, báo giá rõ ràng trước khi làm, không phát sinh bất ngờ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <div class="head center reveal">
+      <h2>Quy trình làm việc</h2>
+      <p>Đơn giản, rõ ràng, nhanh gọn.</p>
+    </div>
+    <div class="step-row">
+      <div class="step reveal"><h3>Nhắn Zalo</h3><p>Gửi ý tưởng và yêu cầu của bạn qua Zalo.</p></div>
+      <div class="step reveal"><h3>Chọn gói, chốt giá</h3><p>Tư vấn gói phù hợp và báo giá rõ ràng.</p></div>
+      <div class="step reveal"><h3>Thiết kế, lập trình</h3><p>Làm web theo yêu cầu, gửi bản xem trước để bạn duyệt.</p></div>
+      <div class="step reveal"><h3>Bàn giao</h3><p>Hoàn thiện, bàn giao và hỗ trợ đưa web lên mạng.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="lien-he">
+  <div class="wrap">
+    <div class="contact-box reveal" data-bg="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop|https://picsum.photos/id/180/1600/900|https://picsum.photos/id/3/1600/900|https://loremflickr.com/1600/900/computer">
+      <div>
+        <h2>Bạn cần làm web? Nhắn Zalo ngay</h2>
+        <p>Gửi ý tưởng của bạn, tôi tư vấn gói phù hợp và báo giá ngay trong ngày.</p>
+      </div>
+      <div class="contact-side">
+        <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">
+          <img class="zalo-img" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">
+          Chat Zalo: 0368910922
+        </a>
+        <div class="phone-line">Số Zalo: <strong>0368910922</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>&copy; 2026 Nhận Lập Trình Uy Tín Chất Lượng</div>
+    <nav>
+      <a href="https://hoangdequyxuong0-eng.github.io/Web-HO-H-C/" target="_blank" rel="noopener">Web ôn Hóa</a>
+      <a href="https://zalo.me/0368910922" target="_blank" rel="noopener">Zalo 0368910922</a>
+    </nav>
+  </div>
+</footer>
+
+<a class="zalo-float" href="https://zalo.me/0368910922" target="_blank" rel="noopener" aria-label="Chat Zalo 0368910922">
+  <img class="zalo-img" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png" alt="Zalo" width="62" height="62" referrerpolicy="no-referrer">
+</a>
+
+<script>
+document.documentElement.classList.add('js');
+
+var burger=document.getElementById('burger');
+var menu=document.getElementById('menu');
+var bar=document.getElementById('top-bar');
+
+burger.addEventListener('click',function(){
+  var open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open?'true':'false');
+});
+menu.addEventListener('click',function(e){
+  if(e.target.closest('a')){
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+  }
+});
+
+function onScroll(){
+  bar.classList.toggle('scrolled',window.scrollY>8);
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+function fitFrames(){
+  var frames=document.querySelectorAll('.screen iframe');
+  for(var i=0;i<frames.length;i++){
+    var f=frames[i];
+    var w=parseInt(f.getAttribute('data-w'),10);
+    f.style.transform='scale('+(f.parentElement.clientWidth/w)+')';
+  }
+}
+window.addEventListener('resize',fitFrames);
+window.addEventListener('load',fitFrames);
+fitFrames();
+
+function loadFirst(list,onOk,onFail){
+  var i=0;
+  function next(){
+    if(i>=list.length){
+      if(onFail){onFail();}
+      return;
+    }
+    var url=list[i];
+    var done=false;
+    var im=new Image();
+    var timer=setTimeout(function(){
+      if(done){return;}
+      done=true;
+      im.onload=im.onerror=null;
+      i++;
+      next();
+    },7000);
+    im.onload=function(){
+      if(done){return;}
+      done=true;
+      clearTimeout(timer);
+      onOk(url);
+    };
+    im.onerror=function(){
+      if(done){return;}
+      done=true;
+      clearTimeout(timer);
+      i++;
+      next();
+    };
+    im.referrerPolicy='no-referrer';
+    im.src=url;
+  }
+  next();
+}
+
+var bgEls=document.querySelectorAll('[data-bg]');
+Array.prototype.forEach.call(bgEls,function(el){
+  var list=el.getAttribute('data-bg').split('|');
+  loadFirst(list,function(url){
+    el.style.setProperty('--bg','url("'+url+'")');
+  });
+});
+
+var ZALO=[
+  'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png',
+  'https://fastly.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png',
+  'https://gcore.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png',
+  'https://raw.githubusercontent.com/homarr-labs/dashboard-icons/main/png/zalo.png',
+  'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zalo.svg',
+  'https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg',
+  'https://cdn.simpleicons.org/zalo'
+];
+var zaloImgs=document.querySelectorAll('.zalo-img');
+Array.prototype.forEach.call(zaloImgs,function(img){
+  var idx=0;
+  function advance(){
+    idx++;
+    if(idx>=ZALO.length){
+      img.style.display='none';
+      return;
+    }
+    img.src=ZALO[idx];
+  }
+  img.addEventListener('error',advance);
+  if(img.complete&&img.naturalWidth===0){advance();}
+});
+
+var items=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        en.target.classList.add('in');
+        io.unobserve(en.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el,i){
+    el.style.transitionDelay=(i%4)*70+'ms';
+    io.observe(el);
+  });
+}else{
+  items.forEach(function(el){el.classList.add('in')});
+}
+</script>
+
+<script>
+var SLOTS=[45,60,30,10,1,5,15,20,25,35,50,40];
+var EV_START=Date.UTC(2026,8,20,0,0,0)-7*3600000;
+var EV_END=Date.UTC(2026,9,1,23,59,59)-7*3600000;
+var lastKey='';
+
+function fmtPrice(v){
+  if(v>=1000000){return (Math.round(v/100000)/10).toString().replace('.',',')+' triệu';}
+  return Math.round(v/1000)+'k';
+}
+
+function renderPrices(){
+  var now=Date.now();
+  var idx=Math.floor(new Date(now+7*3600000).getUTCHours()/2);
+  var evOn=now>=EV_START&&now<=EV_END;
+  var key=idx+'-'+evOn;
+  if(key===lastKey){return;}
+  lastKey=key;
+  Array.prototype.forEach.call(document.querySelectorAll('.ev-only'),function(e){e.hidden=!evOn;});
+  Array.prototype.forEach.call(document.querySelectorAll('.ev-off'),function(e){e.hidden=evOn;});
+  var els=document.querySelectorAll('[data-base]');
+  Array.prototype.forEach.call(els,function(el){
+    var base=parseInt(el.getAttribute('data-base'),10);
+    var evp=parseInt(el.getAttribute('data-event')||'0',10);
+    var pct,price;
+    if(evp>0&&evOn){
+      price=evp;
+      pct=Math.round((1-evp/base)*100);
+    }else{
+      pct=SLOTS[idx];
+      price=Math.round(base*(100-pct)/100/1000)*1000;
+    }
+    var p=el.querySelector('.p');
+    var o=el.querySelector('.o');
+    var b=el.querySelector('.b');
+    if(el.classList.contains('plan')){el.classList.toggle('deal',evp>0&&evOn);}
+    if(p){p.textContent=fmtPrice(price);}
+    if(o){o.textContent=fmtPrice(base);}
+    if(b){b.textContent='-'+pct+'%';}
+  });
+}
+renderPrices();
+setInterval(renderPrices,15000);
+</script>
+
+</body>
+</html>
