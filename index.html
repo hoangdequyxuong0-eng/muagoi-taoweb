@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#1554e6">
+<meta name="color-scheme" content="light">
 <meta property="og:title" content="Nhận Lập Trình Uy Tín Chất Lượng">
 <meta property="og:description" content="Nhận làm web theo yêu cầu, giá từ 150k. Liên hệ Zalo 0368910922.">
 <meta property="og:type" content="website">
@@ -13,11 +14,16 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <title>Nhận Lập Trình Uy Tín Chất Lượng</title>
 <meta name="description" content="Nhận Lập Trình Uy Tín Chất Lượng - Nhận làm web theo yêu cầu, giá từ 150k. Liên hệ Zalo 0368910922.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Nhận Lập Trình Uy Tín Chất Lượng","description":"Nhận làm web theo yêu cầu, giá từ 150k.","telephone":"0368910922","founder":{"@type":"Person","name":"Nguyễn Chí Minh"},"areaServed":"VN","priceRange":"150.000đ - 10.000.000đ","sameAs":["https://zalo.me/0368910922"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 :root{
+  --gut:20px;
+  --maxw:1220px;
   --blue:#1554e6;
   --blue-dark:#0c3aa8;
   --blue-soft:#e8f1ff;
@@ -40,11 +46,18 @@ body{
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+  overflow-wrap:break-word;
+  min-width:320px;
 }
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 :focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
-.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.wrap{
+  width:100%;max-width:var(--maxw);margin:0 auto;
+  padding-left:max(var(--gut),env(safe-area-inset-left,0px));
+  padding-right:max(var(--gut),env(safe-area-inset-right,0px));
+}
+.hero-grid>*,.grid-2>*,.grid-3>*,.grid-4>*,.step-row>*,.contact-box>*,.foot-grid>*{min-width:0}
 
 header{
   position:fixed;top:0;left:0;right:0;z-index:100;
@@ -107,13 +120,13 @@ header.scrolled{box-shadow:0 10px 30px -18px rgba(11,31,68,.35)}
 }
 .hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
 .pill{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:8px 16px;border-radius:999px;
+  display:inline-flex;align-items:flex-start;gap:9px;
+  padding:8px 16px;border-radius:18px;
   background:rgba(255,255,255,.14);color:#fff;
   font-weight:600;font-size:.9rem;margin-bottom:24px;
   border:1px solid rgba(255,255,255,.36);
 }
-.pill i{width:8px;height:8px;border-radius:50%;background:#8fc7ff;display:block}
+.pill i{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:#8fc7ff;display:block;margin-top:.5em}
 .hero h1{
   font-size:clamp(2.2rem,5.2vw,3.9rem);
   line-height:1.12;font-weight:800;color:#fff;
@@ -129,9 +142,9 @@ header.scrolled{box-shadow:0 10px 30px -18px rgba(11,31,68,.35)}
   transition:transform .3s var(--ease),border-color .3s,box-shadow .3s var(--ease);
 }
 .chips a:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:var(--shadow)}
-.chips small{display:block;font-size:.82rem;color:var(--muted);line-height:1.3}
-.chips strong{display:inline;font-size:1.35rem;font-weight:800;color:var(--blue);letter-spacing:-.02em;line-height:1.3}
-.chips s{font-size:.8rem;color:var(--muted);margin-left:6px;font-weight:500}
+.chips small{display:block;font-size:.82rem;color:var(--muted);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chips strong{display:block;white-space:nowrap;font-size:1.35rem;font-weight:800;color:var(--blue);letter-spacing:-.02em;line-height:1.3}
+.chips s{display:block;font-size:.8rem;color:var(--muted);margin:0;line-height:1.3;font-weight:500;white-space:nowrap}
 .chips .hot s{color:#c3d8ff}
 .chips .hot{background:linear-gradient(150deg,var(--blue),var(--blue-dark));border-color:transparent}
 .chips .hot small{color:#c3d8ff}
@@ -335,20 +348,8 @@ section{padding:100px 0}
 @media (max-width:760px){
   section{padding:72px 0}
   .works{padding-top:72px}
-  .wrap{width:min(1180px,calc(100% - 32px))}
+  :root{--gut:16px}
   .nav{height:64px}
-  .burger{display:flex}
-  .menu{
-    position:absolute;top:100%;left:0;right:0;
-    flex-direction:column;align-items:stretch;gap:4px;
-    padding:14px 16px 18px;background:#fff;
-    border-bottom:1px solid var(--line);
-    box-shadow:0 20px 30px -20px rgba(11,31,68,.4);
-    visibility:hidden;opacity:0;transform:translateY(-8px);
-    transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;
-  }
-  .menu.open{visibility:visible;opacity:1;transform:none}
-  .menu .cta{margin:8px 0 0;justify-content:center}
   .hero{padding:96px 0 56px}
   .chips{grid-template-columns:repeat(2,1fr);gap:10px;margin-top:26px}
   .pricing{padding-top:56px}
@@ -361,7 +362,6 @@ section{padding:100px 0}
   .zalo-float{width:56px;height:56px}
 }
 
-.chips s{display:inline}
 .meta{display:flex;align-items:center;gap:8px;min-height:30px;margin-top:10px}
 .meta .o{color:var(--muted);text-decoration:line-through;font-size:.95rem}
 .meta .b{font-style:normal;background:#ffece8;color:#e0391f;font-weight:700;font-size:.8rem;padding:3px 10px;border-radius:999px}
@@ -428,6 +428,7 @@ section{padding:100px 0}
   content:'';position:absolute;left:0;top:5px;width:16px;height:16px;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e0c17a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/16px no-repeat;
 }
+.vcard li.hl{color:#f6e3ae;font-weight:600}
 .vcard .btn{width:100%;padding:15px 20px}
 .vcard .btn-gold{background:transparent;color:#e0c17a;border-color:rgba(224,193,122,.7);box-shadow:none}
 .vcard .btn-gold:hover{background:#e0c17a;color:#2a1d00}
@@ -489,7 +490,6 @@ section{padding:100px 0}
 .step{transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
 .step:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 
-.swipe-hint{display:none}
 
 footer{background:var(--navy);color:#a9c0e8;padding:64px 0 0;border-top:0}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.1fr;gap:40px;padding-bottom:46px}
@@ -500,19 +500,32 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
 .foot-links a:hover{color:#fff}
 .foot-contact .btn{width:100%;max-width:300px}
 .foot-contact p{margin-top:12px;font-size:.93rem}
-.copy{border-top:1px solid rgba(255,255,255,.12);padding:20px 0 calc(20px + env(safe-area-inset-bottom,0px));font-size:.88rem;color:#7f97c4}
+.copy{
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-top:20px;padding-bottom:calc(96px + env(safe-area-inset-bottom,0px));
+  font-size:.88rem;color:#7f97c4;
+}
+.foot-owner{margin-top:12px;color:#cfe0ff;font-size:.95rem}
+.foot-owner b{color:#fff;font-weight:700}
+.foot-links a[href="#"]{cursor:pointer}
+.skip{
+  position:absolute;left:12px;top:-64px;z-index:400;padding:10px 16px;border-radius:10px;
+  background:#fff;color:var(--blue);font-weight:700;box-shadow:var(--shadow);transition:top .2s;
+}
+.skip:focus{top:12px}
+.trust-row{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;color:#cfe0ff;font-size:.86rem}
+.trust-row li{display:flex;align-items:center;gap:6px}
+.trust-row svg{flex:0 0 16px;width:16px;height:16px;color:#7fe0a5}
 
 @media (max-width:760px){
   .float-badge{display:none}
   .grid-4.snap{
-    display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:16px;
-    gap:14px;margin:0 -16px;padding:26px 16px 30px;
+    display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--gut);
+    gap:14px;margin:0 calc(var(--gut) * -1);padding:26px var(--gut) 30px;
     scrollbar-width:none;-webkit-overflow-scrolling:touch;
   }
   .grid-4.snap::-webkit-scrollbar{display:none}
   .grid-4.snap>*{flex:0 0 84%;scroll-snap-align:start}
-  .swipe-hint{display:block;text-align:center;color:var(--muted);font-size:.88rem;margin-top:-6px}
-  .vip .swipe-hint{color:#93aad3}
   .plan:hover,.vcard:hover{transform:none}
   .foot-grid{grid-template-columns:1fr;gap:30px}
   footer{padding-top:52px}
@@ -580,8 +593,198 @@ img,a{-webkit-user-drag:none;user-drag:none}
 .shot-cap p{color:#cfe0ff;font-size:.93rem}
 .shots-note{color:var(--muted);font-size:.88rem;margin-top:4px}
 @media (max-width:760px){
-  .shots{margin:0 -16px;padding:6px 16px 24px;scroll-padding-left:16px}
+  .shots{margin:0 calc(var(--gut) * -1);padding:6px var(--gut) 24px;scroll-padding-left:var(--gut)}
   .shot-nav{display:none}
+}
+
+body.lock{overflow:hidden}
+.modal{position:fixed;inset:0;z-index:300}
+.modal[hidden],.modal [hidden]{display:none!important}
+.modal-backdrop{
+  position:absolute;inset:0;background:rgba(4,14,42,.74);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  opacity:0;transition:opacity .4s;
+}
+.modal.show .modal-backdrop{opacity:1}
+.modal-card{
+  --s:1;--k:.9;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .36 0 0 0 0 .2 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  position:absolute;left:50%;top:50%;
+  width:min(400px,calc(100vw - 24px));
+  transform:translate(-50%,-50%) rotate(calc((1 - var(--k)) * -20deg)) scale(calc(var(--s) * var(--k)));
+  opacity:0;transition:transform .6s var(--ease),opacity .4s;
+  padding:10px;border-radius:5px;isolation:isolate;outline:none;
+  color:#3b3222;font-family:Georgia,'Noto Serif','Times New Roman',serif;
+  background-color:#fbf6e9;
+  background-image:var(--noise),linear-gradient(180deg,#fefaf0 0%,#f6eedb 100%);
+  box-shadow:0 34px 70px -22px rgba(0,0,0,.65),0 2px 0 rgba(255,255,255,.7) inset;
+}
+.modal.show .modal-card{--k:1;opacity:1}
+.modal-card::before{
+  content:'';position:absolute;inset:0;z-index:-1;border-radius:5px;
+  background:#efe4c8;transform:rotate(-1.8deg) translate(-3px,3px);
+  box-shadow:0 10px 24px -10px rgba(0,0,0,.5);
+}
+.tape{
+  position:absolute;top:-13px;left:50%;width:100px;height:28px;z-index:2;
+  transform:translateX(-50%) rotate(-2deg);
+  background:rgba(255,232,140,.8);
+  box-shadow:0 2px 5px rgba(0,0,0,.18);
+}
+.frame{
+  position:relative;padding:16px 16px 14px;
+  border:1.5px solid #9b7b45;
+  box-shadow:inset 0 0 0 4px #fbf6e9,inset 0 0 0 5.5px #9b7b45;
+}
+.p-title{text-align:center}
+.p-title h2{
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-size:1.6rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  color:#8a1c1c;line-height:1.15;
+}
+.p-sub{font-size:.8rem;font-style:italic;color:#6b5a3a;margin-top:3px}
+.p-orn{position:relative;display:block;width:150px;height:1px;margin:10px auto 12px;background:linear-gradient(90deg,transparent,#9b7b45,transparent)}
+.p-orn::after{content:'';position:absolute;left:50%;top:50%;width:7px;height:7px;background:#9b7b45;transform:translate(-50%,-50%) rotate(45deg)}
+.clauses{list-style:none}
+.clauses li{
+  padding:5px 0;font-size:.86rem;line-height:1.42;
+  border-bottom:1px dotted rgba(155,123,69,.55);
+}
+.clauses li:last-child{border-bottom:0}
+.clauses b{color:#8a1c1c;font-weight:700;margin-right:3px}
+.mark{font-weight:700;color:#2b2210;background:linear-gradient(transparent 52%,rgba(255,206,64,.75) 52%)}
+.sign-row{position:relative;display:flex;justify-content:flex-end;margin-top:12px}
+.date-sign{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:210px}
+.date{font-style:italic;font-size:.8rem;color:#5a4a2c}
+.who{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#7a6a4a;margin-top:4px}
+.sig-wrap{position:relative;width:100%;margin-top:2px}
+.sig{
+  display:block;font-family:'Great Vibes','Dancing Script','Segoe Script','Brush Script MT',cursive;
+  font-size:2.3rem;line-height:1.25;color:#1a3384;white-space:nowrap;
+  text-shadow:0 1px 0 rgba(26,51,132,.22);transform:rotate(-4deg);
+}
+.modal.show .sig{animation:sign 1.5s .6s ease-out both}
+@keyframes sign{from{clip-path:inset(-20% 100% -20% 0)}to{clip-path:inset(-30% -15% -30% -15%)}}
+.swash{display:block;width:88%;height:14px;margin:-6px auto 0;transform:rotate(-2deg)}
+.swash path{fill:none;stroke:#1a3384;stroke-width:1.7;stroke-linecap:round;stroke-dasharray:260;stroke-dashoffset:0}
+.modal.show .swash path{animation:draw .9s 1.9s ease-out both}
+@keyframes draw{from{stroke-dashoffset:260}to{stroke-dashoffset:0}}
+.name{
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-weight:700;font-size:.98rem;letter-spacing:.05em;color:#2b2210;margin-top:2px;
+}
+.p-actions{display:flex;flex-direction:column;gap:8px;margin-top:10px;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.p-actions .btn{width:100%;height:44px;padding:0 18px;font-size:.92rem;border-radius:12px}
+.close-slot{height:44px;display:flex;align-items:center;justify-content:center}
+.wait{width:100%;text-align:center;color:#6b5a3a;font-size:.82rem}
+.wait b{color:#8a1c1c}
+.wait-bar{height:4px;border-radius:99px;background:rgba(155,123,69,.25);margin-top:7px;overflow:hidden}
+.wait-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#c9a45a,#8a1c1c)}
+.wait.run .wait-bar i{animation:fill 3s linear forwards}
+@keyframes fill{to{width:100%}}
+.modal-x{
+  position:absolute;top:-12px;right:-8px;z-index:4;width:40px;height:40px;border-radius:50%;
+  border:2px solid #fff;background:#b3261e;color:#fff;cursor:pointer;
+  display:grid;place-items:center;animation:pop .5s var(--ease);
+  box-shadow:0 8px 18px -6px rgba(179,38,30,.8);
+}
+.modal-x svg{width:18px;height:18px}
+@keyframes pop{from{transform:scale(.3);opacity:0}to{transform:none;opacity:1}}
+.close-slot .btn{animation:pop .5s var(--ease)}
+@media (orientation:landscape) and (max-height:560px){
+  .modal-card{width:min(780px,calc(100vw - 24px))}
+  .frame{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:center}
+  .p-side{display:flex;flex-direction:column;justify-content:center}
+  .sign-row{margin-top:0}
+}
+
+.rules-float{
+  position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(22px,env(safe-area-inset-bottom,0px));z-index:120;
+  display:flex;align-items:center;gap:9px;height:52px;padding:0 22px 0 16px;
+  border:0;border-radius:999px;cursor:pointer;color:#fff;
+  font-family:inherit;font-weight:700;font-size:.95rem;
+  background:linear-gradient(135deg,#2f74ff,#1554e6);
+  box-shadow:0 12px 30px -8px rgba(21,84,230,.7);
+  transition:transform .3s var(--ease);
+}
+.rules-float:hover{transform:translateY(-3px)}
+.rules-float:active{transform:scale(.96)}
+.rules-float svg{width:22px;height:22px;flex:0 0 22px}
+.rules-float::before{
+  content:'';position:absolute;inset:0;border-radius:999px;
+  border:2px solid rgba(21,84,230,.5);pointer-events:none;
+  animation:ripple 2.8s ease-out infinite;
+}
+@media (max-width:760px){
+  .rules-float{height:48px;padding:0 18px 0 13px;font-size:.9rem}
+  .rules-float .lg{display:none}
+}
+
+.dots button{position:relative}
+.dots button::after{content:'';position:absolute;inset:-12px -5px}
+
+@media (min-width:1600px){
+  :root{--maxw:1400px}
+  html{font-size:112.5%}
+}
+@media (min-width:2200px){
+  :root{--maxw:1640px}
+  html{font-size:131%}
+}
+@media (min-width:1041px) and (max-width:1200px){
+  .hero-grid{gap:36px}
+  .chips{gap:8px}
+  .chips a{padding:12px 12px}
+  .chips strong{font-size:1.15rem}
+}
+@media (max-width:1100px){
+  .grid-4{grid-template-columns:repeat(2,1fr);gap:30px 22px}
+}
+@media (max-width:900px){
+  .burger{display:flex}
+  .menu{
+    position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:4px;
+    padding:14px max(var(--gut),env(safe-area-inset-left,0px)) 18px;background:#fff;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 20px 30px -20px rgba(11,31,68,.4);
+    visibility:hidden;opacity:0;transform:translateY(-8px);
+    transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;
+  }
+  .menu.open{visibility:visible;opacity:1;transform:none}
+  .menu a{padding:13px 16px}
+  .menu .cta{margin:8px 0 0;justify-content:center}
+}
+@media (max-width:360px){
+  :root{--gut:14px}
+  html{font-size:93.75%}
+  .btn{padding:14px 20px}
+  .chips a{padding:11px 12px}
+  .chips strong{font-size:1.2rem}
+  .plan{padding:30px 22px}
+  .vcard{padding:34px 22px 26px}
+  .brand{font-size:1rem;gap:9px}
+  .rules-float{padding:0 14px 0 11px}
+}
+@media (orientation:landscape) and (max-height:520px){
+  .nav{height:56px}
+  .hero{padding:82px 0 40px}
+  section{padding:56px 0}
+  .works{padding-top:56px}
+  .hero h1{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:14px}
+  .hero p.lead{margin-bottom:20px}
+  .chips{margin-top:20px}
+}
+@media (hover:none){
+  .plan:hover,.vcard:hover,.service:hover,.step:hover,.chips a:hover,.btn:hover,.zalo-float:hover,.rules-float:hover,.slot:hover{transform:none}
+  .shot-card:hover .shot-img,.work:hover::before{transform:none}
+  .vcard:hover::after{left:-60%}
+}
+
+@media (max-width:520px){
+  .zalo-tip{right:0;top:auto;bottom:calc(100% + 12px);transform:translateY(8px)}
+  .zalo-float.tip .zalo-tip{transform:none}
+  .zalo-tip::after{right:22px;top:auto;bottom:-6px;transform:rotate(45deg)}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -591,6 +794,8 @@ img,a{-webkit-user-drag:none;user-drag:none}
 </style>
 </head>
 <body>
+
+<a class="skip" href="#top">Bỏ qua đến nội dung</a>
 
 <header id="top-bar">
   <div class="wrap nav">
@@ -648,6 +853,11 @@ img,a{-webkit-user-drag:none;user-drag:none}
         <a href="#bang-gia" data-base="350000"><small>Web lớn</small><strong class="p">350k</strong><s class="o"></s></a>
         <a href="#bang-gia" class="hot" data-base="1000000"><small>Chuyên nghiệp</small><strong class="p">1 triệu</strong><s class="o"></s></a>
       </div>
+      <ul class="trust-row">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Xong trong 1–18 ngày</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>100% có email</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Bảo hành 12 tháng, VIP 2 năm</li>
+      </ul>
     </div>
 
     <div class="devices" aria-label="Xem trước website đã thực hiện">
@@ -752,8 +962,7 @@ img,a{-webkit-user-drag:none;user-drag:none}
         <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
       </div>
     </div>
-    <p class="swipe-hint">Vuốt ngang để xem thêm gói</p>
-    <p class="note">Gói VIP có giá cố định.</p>
+    <p class="note">Chỉ gói VIP mới được lên tìm kiếm Google. Gói VIP có giá cố định.</p>
   </div>
 </section>
 
@@ -763,7 +972,7 @@ img,a{-webkit-user-drag:none;user-drag:none}
       <div class="orn"><i></i></div>
       <span class="vip-badge">Không áp dụng giảm giá</span>
       <h2>Gói <span class="gold">VIP</span> kèm tên miền</h2>
-      <p>Mọi gói VIP đều kèm tên miền .com và .vn, bảo hành 2 năm và tặng kèm email. Giá VIP cố định.</p>
+      <p>Mọi gói VIP đều kèm tên miền .com và .vn, bảo hành 2 năm, tặng kèm email và lên tìm kiếm Google. Giá VIP cố định.</p>
     </div>
     <div class="grid-4 snap">
                   <div class="vcard reveal">
@@ -777,6 +986,7 @@ img,a{-webkit-user-drag:none;user-drag:none}
         <p class="dom-cap">Tặng kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế riêng theo thương hiệu</li>
+          <li class="hl">Lên tìm kiếm Google</li>
           <li>Web nhiều trang cơ bản</li>
           <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
@@ -796,6 +1006,7 @@ img,a{-webkit-user-drag:none;user-drag:none}
         <p class="dom-cap">Tặng kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế riêng theo thương hiệu</li>
+          <li class="hl">Lên tìm kiếm Google</li>
           <li>Nhiều trang, chức năng theo yêu cầu</li>
           <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
@@ -808,7 +1019,7 @@ img,a{-webkit-user-drag:none;user-drag:none}
       <div class="vcard reveal">
         <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/><line x1="6" y1="21.5" x2="18" y2="21.5"/></svg></div>
         <h3>VIP 3</h3>
-        <p class="region">Tối ưu tìm kiếm</p>
+        <p class="region">Chức năng nâng cao</p>
         <div class="vprice">5<small>triệu</small></div>
         <div class="vline"></div>
         <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.com</em></span></div>
@@ -816,7 +1027,8 @@ img,a{-webkit-user-drag:none;user-drag:none}
         <p class="dom-cap">Tặng kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế riêng, nhiều chức năng</li>
-          <li>Tối ưu tốc độ và chuẩn tìm kiếm</li>
+          <li class="hl">Lên tìm kiếm Google</li>
+          <li>Tối ưu tốc độ và giao diện</li>
           <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
           <li>Ưu tiên hỗ trợ và chỉnh sửa</li>
@@ -837,8 +1049,9 @@ img,a{-webkit-user-drag:none;user-drag:none}
         <p class="dom-cap">Tặng kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế cao cấp, hiệu ứng riêng</li>
+          <li class="hl">Lên tìm kiếm Google</li>
           <li>Chức năng theo yêu cầu, thoải mái ý tưởng</li>
-          <li>Tối ưu tốc độ và chuẩn tìm kiếm</li>
+          <li>Tối ưu tốc độ và giao diện</li>
           <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Ưu tiên hỗ trợ cao nhất</li>
           <li>Bảo hành 2 năm</li>
@@ -847,7 +1060,6 @@ img,a{-webkit-user-drag:none;user-drag:none}
         <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
       </div>
     </div>
-    <p class="swipe-hint">Vuốt ngang để xem thêm gói</p>
   </div>
 </section>
 
@@ -984,6 +1196,7 @@ img,a{-webkit-user-drag:none;user-drag:none}
           <img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">
           Chat Zalo: 0368910922
         </a>
+        <div class="phone-line">Chủ web: <strong>Nguyễn Chí Minh</strong></div>
         <div class="phone-line">Số Zalo: <strong>0368910922</strong></div>
       </div>
     </div>
@@ -1000,13 +1213,16 @@ img,a{-webkit-user-drag:none;user-drag:none}
         <span>Nhận Lập Trình</span>
       </a>
       <p>Uy tín, chất lượng. Nhận làm web theo yêu cầu cho cá nhân và doanh nghiệp.</p>
+      <p class="foot-owner">Chủ web: <b>Nguyễn Chí Minh</b></p>
     </div>
     <div class="foot-links">
       <h4>Liên kết</h4>
       <a href="#bang-gia">Bảng giá</a>
       <a href="#goi-vip">Gói VIP</a>
       <a href="#website">Web đã làm</a>
+      <a href="#mau-web">Mẫu web</a>
       <a href="#dich-vu">Dịch vụ</a>
+      <a href="#" id="footRules">Cam kết và quy định</a>
     </div>
     <div class="foot-contact">
       <h4>Liên hệ</h4>
@@ -1016,6 +1232,57 @@ img,a{-webkit-user-drag:none;user-drag:none}
   </div>
   <div class="wrap copy">&copy; 2026 Nhận Lập Trình Uy Tín Chất Lượng</div>
 </footer>
+
+<div class="modal" id="rules" role="dialog" aria-modal="true" aria-labelledby="rulesTitle" hidden>
+  <div class="modal-backdrop" id="rulesBack"></div>
+  <div class="modal-card" id="rulesCard" tabindex="-1">
+    <span class="tape"></span>
+    <button type="button" class="modal-x" id="rulesX" aria-label="Đóng bảng" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+    <div class="frame">
+      <div class="p-main">
+        <div class="p-title">
+          <h2 id="rulesTitle">Giấy cam kết</h2>
+          <p class="p-sub">Nhận Lập Trình Uy Tín Chất Lượng</p>
+          <i class="p-orn"></i>
+        </div>
+        <ol class="clauses">
+          <li><b>Điều 1.</b> Làm xong web trong vòng <span class="mark">1 đến 18 ngày</span>, tùy loại web.</li>
+          <li><b>Điều 2.</b> <span class="mark">Luôn 100% có email</span> khi mua web.</li>
+          <li><b>Điều 3.</b> Bảo hành 12 tháng cho web thường, 2 năm cho gói VIP.</li>
+          <li><b>Điều 4.</b> Gói VIP kèm tên miền .com và .vn, giá cố định.</li>
+          <li><b>Điều 5.</b> <span class="mark">Chỉ web VIP mới được lên tìm kiếm Google.</span></li>
+          <li><b>Điều 6.</b> Báo giá rõ ràng trước khi làm, không phát sinh chi phí.</li>
+          <li><b>Điều 7.</b> Hỗ trợ đưa web lên mạng, tư vấn trực tiếp qua Zalo.</li>
+        </ol>
+      </div>
+      <div class="p-side">
+        <div class="sign-row">
+          <div class="date-sign">
+            <span class="date" id="paperDate">Ngày 20 tháng 9 năm 2026</span>
+            <span class="who">Người cam kết</span>
+            <div class="sig-wrap">
+              <span class="sig">Nguyễn Chí Minh</span>
+              <svg class="swash" viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M3 9C34 2 70 13 104 7S168 3 197 8"/></svg>
+            </div>
+            <span class="name">Nguyễn Chí Minh</span>
+          </div>
+        </div>
+        <div class="p-actions">
+          <a class="btn btn-zalo" href="https://zalo.me/0368910922" target="_blank" rel="noopener"><img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">Nhắn Zalo tư vấn</a>
+          <div class="close-slot">
+            <button type="button" class="btn btn-primary" id="rulesOk" hidden>Đã hiểu, xem web</button>
+            <div class="wait" id="rulesWait">Nút đóng hiện sau <b id="rulesCount">3</b> giây<div class="wait-bar"><i></i></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="rules-float" id="rulesBtn" aria-label="Mở bảng cam kết">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+  <span>Cam kết<span class="lg"> &amp; quy định</span></span>
+</button>
 
 <a class="zalo-float" href="https://zalo.me/0368910922" target="_blank" rel="noopener" aria-label="Chat Zalo 0368910922">
   <img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="62" height="62" referrerpolicy="no-referrer">
@@ -1245,8 +1512,10 @@ document.getElementById('shotPrev').addEventListener('click',function(){shotStep
 document.getElementById('shotNext').addEventListener('click',function(){shotStep(1);shotHold();});
 
 var zf=document.querySelector('.zalo-float');
-setTimeout(function(){zf.classList.add('tip');},1000);
-setTimeout(function(){zf.classList.remove('tip');},9000);
+function showZaloTip(){
+  zf.classList.add('tip');
+  setTimeout(function(){zf.classList.remove('tip');},8000);
+}
 
 ['contextmenu','copy','cut','dragstart','selectstart'].forEach(function(t){
   document.addEventListener(t,function(e){e.preventDefault();});
@@ -1342,6 +1611,100 @@ function renderPrices(){
 }
 renderPrices();
 setInterval(renderPrices,15000);
+</script>
+
+<script>
+var rulesBox=document.getElementById('rules');
+var rulesCard=document.getElementById('rulesCard');
+var rulesX=document.getElementById('rulesX');
+var rulesOk=document.getElementById('rulesOk');
+var rulesWait=document.getElementById('rulesWait');
+var rulesCount=document.getElementById('rulesCount');
+var rulesCanClose=false;
+var rulesTimer=null;
+var rulesFocus=null;
+var rulesFirstClose=false;
+
+function fitRules(){
+  if(rulesBox.hidden){return;}
+  var w=rulesCard.offsetWidth;
+  var h=rulesCard.offsetHeight;
+  var cap=window.innerWidth>=2200?1.7:(window.innerWidth>=1600?1.35:1);
+  var s=Math.min(cap,(window.innerWidth-16)/w,(window.innerHeight-16)/h);
+  rulesCard.style.setProperty('--s',s.toFixed(3));
+}
+window.addEventListener('resize',fitRules);
+window.addEventListener('orientationchange',function(){setTimeout(fitRules,200);});
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fitRules);}
+
+var vnNow=new Date(Date.now()+7*3600000);
+document.getElementById('paperDate').textContent='Ngày '+vnNow.getUTCDate()+' tháng '+(vnNow.getUTCMonth()+1)+' năm '+vnNow.getUTCFullYear();
+
+function rulesReady(){
+  rulesCanClose=true;
+  rulesWait.hidden=true;
+  rulesX.hidden=false;
+  rulesOk.hidden=false;
+}
+
+function openRules(delay){
+  rulesFocus=document.activeElement;
+  rulesBox.hidden=false;
+  document.body.classList.add('lock');
+  fitRules();
+  requestAnimationFrame(function(){
+    requestAnimationFrame(function(){rulesBox.classList.add('show');});
+  });
+  clearInterval(rulesTimer);
+  if(!delay){
+    rulesReady();
+  }else{
+    rulesCanClose=false;
+    rulesX.hidden=true;
+    rulesOk.hidden=true;
+    rulesWait.hidden=false;
+    var n=3;
+    rulesCount.textContent=n;
+    rulesWait.classList.remove('run');
+    void rulesWait.offsetWidth;
+    rulesWait.classList.add('run');
+    rulesTimer=setInterval(function(){
+      n--;
+      if(n>0){
+        rulesCount.textContent=n;
+      }else{
+        clearInterval(rulesTimer);
+        rulesReady();
+      }
+    },1000);
+  }
+  rulesCard.focus({preventScroll:true});
+}
+
+function closeRules(){
+  if(!rulesCanClose){return;}
+  rulesBox.classList.remove('show');
+  setTimeout(function(){
+    rulesBox.hidden=true;
+    document.body.classList.remove('lock');
+  },400);
+  if(rulesFocus&&rulesFocus.focus){rulesFocus.focus();}
+  if(!rulesFirstClose){
+    rulesFirstClose=true;
+    setTimeout(showZaloTip,700);
+  }
+}
+
+rulesX.addEventListener('click',closeRules);
+rulesOk.addEventListener('click',closeRules);
+document.getElementById('rulesBack').addEventListener('click',closeRules);
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'&&!rulesBox.hidden){closeRules();}
+});
+document.getElementById('rulesBtn').addEventListener('click',function(){openRules(false);});
+document.getElementById('footRules').addEventListener('click',function(e){e.preventDefault();openRules(false);});
+
+setTimeout(function(){openRules(true);},350);
 </script>
 
 </body>
