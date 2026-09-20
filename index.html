@@ -15,7 +15,7 @@
 <meta name="description" content="Nhận Lập Trình Uy Tín Chất Lượng - Nhận làm web theo yêu cầu, giá từ 150k. Liên hệ Zalo 0368910922.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --blue:#1554e6;
@@ -77,7 +77,7 @@ header.scrolled{box-shadow:0 10px 30px -18px rgba(11,31,68,.35)}
   background:var(--blue);color:#fff;box-shadow:var(--shadow-sm);
 }
 .menu .cta:hover{background:var(--blue-dark);color:#fff}
-.menu .cta img{width:24px;height:24px;border-radius:7px;background:#fff}
+.menu .cta img{width:26px;height:26px;border-radius:50%;background:#fff;padding:3px;object-fit:contain}
 .burger{
   display:none;width:44px;height:44px;border-radius:12px;cursor:pointer;
   border:1px solid var(--line);background:#fff;color:var(--navy);
@@ -92,7 +92,7 @@ header.scrolled{box-shadow:0 10px 30px -18px rgba(11,31,68,.35)}
   transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .25s,border-color .25s,color .25s;
 }
 .btn:hover{transform:translateY(-3px)}
-.btn img{width:26px;height:26px;border-radius:7px;background:#fff}
+.btn img{width:30px;height:30px;border-radius:50%;background:#fff;padding:3px;object-fit:contain}
 .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 30px -12px rgba(21,84,230,.7)}
 .btn-primary:hover{background:var(--blue-dark)}
 .btn-white{background:#fff;color:var(--blue);box-shadow:0 14px 30px -14px rgba(11,31,68,.5)}
@@ -100,32 +100,26 @@ header.scrolled{box-shadow:0 10px 30px -18px rgba(11,31,68,.35)}
 .btn-line{background:#fff;color:var(--blue);border-color:var(--line)}
 .btn-line:hover{border-color:var(--blue);background:var(--blue-mist)}
 
-.hero{
-  position:relative;
-  padding:130px 0 96px;
-  background-color:var(--blue-soft);
-  background-image:
-    linear-gradient(90deg,#fff 0%,rgba(255,255,255,.95) 36%,rgba(232,241,255,.6) 68%,rgba(232,241,255,.25) 100%),
-    var(--bg,none);
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+.hero{position:relative;padding:130px 0 96px;background-color:var(--navy);overflow:hidden;isolation:isolate}
+.hero-shade{
+  position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(100deg,rgba(6,22,64,.9) 0%,rgba(10,44,130,.68) 52%,rgba(21,84,230,.36) 100%);
 }
 .hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
 .pill{
   display:inline-flex;align-items:center;gap:9px;
   padding:8px 16px;border-radius:999px;
-  background:var(--blue-soft);color:var(--blue);
+  background:rgba(255,255,255,.14);color:#fff;
   font-weight:600;font-size:.9rem;margin-bottom:24px;
-  border:1px solid #c8dcff;
+  border:1px solid rgba(255,255,255,.36);
 }
-.pill i{width:8px;height:8px;border-radius:50%;background:var(--blue);display:block}
+.pill i{width:8px;height:8px;border-radius:50%;background:#8fc7ff;display:block}
 .hero h1{
   font-size:clamp(2.2rem,5.2vw,3.9rem);
-  line-height:1.12;font-weight:800;color:var(--navy);
+  line-height:1.12;font-weight:800;color:#fff;
   letter-spacing:-.025em;margin-bottom:22px;
 }
-.hero p.lead{font-size:1.15rem;color:var(--text);max-width:540px;margin-bottom:34px}
+.hero p.lead{font-size:1.15rem;color:#dbe8ff;max-width:540px;margin-bottom:34px}
 .actions{display:flex;flex-wrap:wrap;gap:14px}
 .chips{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
 .chips a{
@@ -186,17 +180,13 @@ section{padding:100px 0}
   box-shadow:var(--shadow);
 }
 .work::before{
-  content:'';position:absolute;inset:0;z-index:-2;
-  background-color:var(--blue-dark);
-  background-image:var(--bg,linear-gradient(135deg,#1554e6,#0b1f44));
-  background-size:cover;background-position:center;
-  transition:transform .9s var(--ease);
+  content:'';position:absolute;inset:0;z-index:-3;
+  background:linear-gradient(135deg,#1554e6,#0b1f44);
 }
 .work::after{
   content:'';position:absolute;inset:0;z-index:-1;
   background:linear-gradient(180deg,rgba(11,31,68,.05) 0%,rgba(11,31,68,.55) 55%,rgba(8,26,72,.94) 100%);
 }
-.work:hover::before{transform:scale(1.07)}
 .work h3{font-size:1.75rem;font-weight:800;margin-bottom:10px;letter-spacing:-.01em}
 .work p{color:#dbe8ff;margin-bottom:24px;max-width:460px}
 .work .btn{align-self:flex-start;padding:14px 26px}
@@ -297,32 +287,45 @@ section{padding:100px 0}
 .phone-line{text-align:center;color:#d4e4ff;font-size:.95rem}
 .phone-line strong{color:#fff;font-size:1.2rem;letter-spacing:.02em}
 
-
 .zalo-float{
   position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:120;
-  width:62px;height:62px;border-radius:50%;
-  display:block;background:#fff;
-  box-shadow:0 14px 34px -8px rgba(0,104,255,.6);
+  width:64px;height:64px;border-radius:50%;display:block;
+  background:#fff;border:3px solid #0068ff;
+  box-shadow:0 12px 30px -8px rgba(0,104,255,.6);
   transition:transform .3s var(--ease);
+  animation:wiggle 5s ease-in-out 3s infinite;
 }
-.zalo-float:hover{transform:scale(1.08)}
-.zalo-float img{width:100%;height:100%;border-radius:50%;object-fit:cover;animation:ring 2.6s ease-out infinite}
-@keyframes ring{
-  0%{box-shadow:0 0 0 0 rgba(0,104,255,.5)}
-  70%,100%{box-shadow:0 0 0 14px rgba(0,104,255,0)}
+.zalo-float:hover{transform:scale(1.08);animation:none}
+.zalo-float img{width:100%;height:100%;border-radius:50%;background:#fff;object-fit:contain;padding:5px;display:block}
+.zalo-float::before,.zalo-float::after{
+  content:'';position:absolute;inset:-3px;border-radius:50%;
+  border:2px solid rgba(0,104,255,.5);pointer-events:none;
+  animation:ripple 2.8s ease-out infinite;
 }
+.zalo-float::after{animation-delay:1.4s}
+@keyframes ripple{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.7);opacity:0}}
+@keyframes wiggle{0%,86%,100%{transform:rotate(0)}89%{transform:rotate(-12deg)}92%{transform:rotate(10deg)}95%{transform:rotate(-6deg)}98%{transform:rotate(3deg)}}
+.zalo-tip{
+  position:absolute;right:80px;top:50%;
+  transform:translate(12px,-50%);white-space:nowrap;
+  display:flex;flex-direction:column;line-height:1.3;
+  background:#fff;padding:10px 16px;border-radius:14px;
+  box-shadow:0 14px 34px -10px rgba(11,31,68,.35);
+  opacity:0;pointer-events:none;
+  transition:opacity .5s,transform .5s var(--ease);
+}
+.zalo-tip b{color:var(--navy);font-size:.95rem;font-weight:700}
+.zalo-tip small{color:#0068ff;font-size:.85rem;font-weight:600}
+.zalo-tip::after{content:'';position:absolute;right:-6px;top:50%;width:12px;height:12px;background:#fff;transform:translateY(-50%) rotate(45deg)}
+.zalo-float.tip .zalo-tip{opacity:1;transform:translate(0,-50%)}
 
 .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .reveal.in{opacity:1;transform:none}
 
 @media (max-width:1040px){
   .hero-grid{grid-template-columns:1fr;gap:48px}
-  .hero{
-    padding:112px 0 70px;
-    background-image:
-      linear-gradient(180deg,#fff 0%,rgba(255,255,255,.94) 45%,rgba(232,241,255,.7) 100%),
-      var(--bg,none);
-  }
+  .hero{padding:112px 0 70px}
+  .hero-shade{background:linear-gradient(180deg,rgba(6,22,64,.9) 0%,rgba(10,44,130,.74) 100%)}
   .devices{display:none}
   .grid-4{grid-template-columns:repeat(2,1fr);gap:30px 22px}
   .grid-3{grid-template-columns:repeat(2,1fr)}
@@ -365,45 +368,71 @@ section{padding:100px 0}
 .plan.pro .meta .o{color:#c3d8ff}
 .plan.pro .meta .b{background:rgba(255,255,255,.2);color:#fff}
 
-
 .vip{
-  color:#dbe8ff;
-  background-color:var(--navy);
-  background-image:linear-gradient(180deg,rgba(8,26,72,.94),rgba(11,31,68,.97)),var(--bg,none);
+  color:#cdd8ee;
+  background-color:#060f24;
+  background-image:
+    radial-gradient(720px 340px at 50% -5%,rgba(224,193,122,.16),transparent 65%),
+    linear-gradient(180deg,rgba(5,12,32,.95),rgba(8,20,48,.97)),
+    var(--bg,none);
   background-size:cover;background-position:center;background-repeat:no-repeat;
 }
-.vip .head h2{color:#fff}
-.vip .head p{color:#a9c0e8}
+.vip .head h2{font-family:'Playfair Display',Georgia,'Times New Roman',serif;color:#fff;font-weight:700;letter-spacing:.01em}
+.vip .head p{color:#9fb1d3}
+.gold{background:linear-gradient(120deg,#f6e3ae,#e0c17a 55%,#b8893a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.orn{display:flex;align-items:center;justify-content:center;gap:14px;width:220px;margin:0 auto 18px}
+.orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,#d6b166)}
+.orn::after{transform:scaleX(-1)}
+.orn i{width:8px;height:8px;background:#e0c17a;transform:rotate(45deg);display:block}
 .vip-badge{
-  display:inline-block;padding:6px 16px;border-radius:999px;margin-bottom:16px;
-  background:rgba(245,185,66,.16);border:1px solid rgba(245,185,66,.55);
-  color:#f5b942;font-weight:600;font-size:.88rem;
+  display:inline-block;padding:6px 18px;border-radius:999px;margin-bottom:18px;
+  border:1px solid rgba(224,193,122,.45);color:#e0c17a;font-weight:500;font-size:.85rem;
 }
 .vcard{
   position:relative;display:flex;flex-direction:column;
-  padding:34px 26px;border-radius:24px;
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
-  transition:transform .35s var(--ease),border-color .35s,box-shadow .35s var(--ease);
+  padding:38px 28px 30px;border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+  border:1px solid rgba(224,193,122,.28);
+  transition:transform .4s var(--ease),border-color .4s,box-shadow .4s var(--ease);
 }
-.vcard:hover{transform:translateY(-8px);border-color:#f5b942;box-shadow:0 26px 60px -26px rgba(245,185,66,.55)}
-.vcard.top{border-color:#f5b942;background:linear-gradient(165deg,rgba(245,185,66,.16),rgba(255,255,255,.05))}
-.vcard h3{color:#fff;font-size:1.3rem;font-weight:800}
-.vcard .region{color:#f5b942;font-weight:600;font-size:.95rem;margin:2px 0 18px}
-.vprice{color:#fff;font-size:2.4rem;font-weight:800;letter-spacing:-.03em;line-height:1}
-.regions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.regions span{padding:5px 12px;border-radius:999px;font-size:.82rem;border:1px solid rgba(255,255,255,.28);color:#b8cbee}
-.regions span.on{background:#f5b942;border-color:#f5b942;color:#241800;font-weight:700}
-.vcard .hint{font-size:.85rem;color:#93aad3;margin-top:10px}
-.vcard ul{list-style:none;margin:22px 0 28px;flex:1}
-.vcard li{position:relative;padding-left:30px;margin-bottom:13px;font-size:.95rem;color:#dbe8ff}
+.vcard:hover{transform:translateY(-6px);border-color:rgba(224,193,122,.75);box-shadow:0 28px 60px -30px rgba(224,193,122,.45)}
+.vcard.top{
+  border-color:rgba(224,193,122,.85);
+  background:linear-gradient(180deg,rgba(224,193,122,.14),rgba(255,255,255,.02));
+  box-shadow:0 30px 70px -34px rgba(224,193,122,.6);
+}
+.v-tag{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  padding:5px 16px;border-radius:999px;white-space:nowrap;
+  background:linear-gradient(120deg,#f6e3ae,#d6b166);color:#2a1d00;font-weight:700;font-size:.78rem;
+}
+.v-icon{width:34px;height:34px;color:#e0c17a;margin-bottom:14px}
+.v-icon svg{width:100%;height:100%;display:block}
+.vcard h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;color:#fff;font-size:1.55rem;font-weight:700;line-height:1.2}
+.vcard .region{color:#b9c6e0;font-size:.92rem;margin-top:2px}
+.vprice{
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-size:3rem;font-weight:700;line-height:1;margin:22px 0 4px;
+  background:linear-gradient(120deg,#fff3cf,#e0c17a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.vprice small{font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:1rem;font-weight:500;margin-left:8px;-webkit-text-fill-color:#b9c6e0}
+.vline{height:1px;background:linear-gradient(90deg,rgba(224,193,122,.6),transparent);margin:18px 0 12px}
+.dom-row{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:.97rem;color:#e4ebf8}
+.dom-row svg{width:16px;height:16px;flex:0 0 16px;color:#e0c17a}
+.dom-row em{font-style:normal;font-weight:700;color:#e0c17a}
+.dom-cap{font-size:.82rem;color:#8ea2c8;margin-top:4px}
+.vcard ul{list-style:none;margin:18px 0 26px;flex:1;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)}
+.vcard li{position:relative;padding-left:26px;margin-bottom:12px;font-size:.94rem;color:#d3ddf1}
 .vcard li::before{
-  content:'';position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;
-  background:#f5b942 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23241800' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat;
+  content:'';position:absolute;left:0;top:5px;width:16px;height:16px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e0c17a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/16px no-repeat;
 }
-.btn-gold{background:#f5b942;color:#241800;box-shadow:0 14px 30px -14px rgba(245,185,66,.8)}
-.btn-gold:hover{background:#ffcb63}
 .vcard .btn{width:100%;padding:15px 20px}
-
+.vcard .btn-gold{background:transparent;color:#e0c17a;border-color:rgba(224,193,122,.7);box-shadow:none}
+.vcard .btn-gold:hover{background:#e0c17a;color:#2a1d00}
+.vcard.top .btn-gold{background:linear-gradient(120deg,#f6e3ae,#d6b166);color:#2a1d00;border-color:transparent}
+.vcard.top .btn-gold:hover{background:linear-gradient(120deg,#fff0c4,#e6c47c)}
 
 .ev-only[hidden],.ev-off[hidden]{display:none!important}
 .pill-hot{background:#fff0ea;color:#e0391f;border-color:#ffc9b8;transition:border-color .25s}
@@ -433,14 +462,9 @@ section{padding:100px 0}
 
 .progress{position:absolute;left:0;bottom:-1px;height:3px;width:100%;background:linear-gradient(90deg,var(--blue),var(--sky));transform:scaleX(0);transform-origin:left;pointer-events:none}
 
-.hero{overflow:hidden}
 .hero .wrap{position:relative;z-index:1}
-.hero::before,.hero::after{content:'';position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
-.hero::before{width:420px;height:420px;right:-80px;top:40px;background:rgba(56,160,255,.32);animation:drift 12s ease-in-out infinite alternate}
-.hero::after{width:320px;height:320px;left:-100px;bottom:-60px;background:rgba(21,84,230,.16);animation:drift 15s ease-in-out infinite alternate-reverse}
-@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-40px,30px,0)}}
 .grad{
-  background:linear-gradient(120deg,var(--blue) 0%,var(--sky) 100%);
+  background:linear-gradient(120deg,#8fc7ff 0%,#ffffff 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
   -webkit-box-decoration-break:clone;box-decoration-break:clone;
 }
@@ -479,7 +503,6 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
 .copy{border-top:1px solid rgba(255,255,255,.12);padding:20px 0 calc(20px + env(safe-area-inset-bottom,0px));font-size:.88rem;color:#7f97c4}
 
 @media (max-width:760px){
-  .hero::before,.hero::after{display:none}
   .float-badge{display:none}
   .grid-4.snap{
     display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:16px;
@@ -493,6 +516,72 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
   .plan:hover,.vcard:hover{transform:none}
   .foot-grid{grid-template-columns:1fr;gap:30px}
   footer{padding-top:52px}
+}
+
+.hero .btn-primary{background:#fff;color:var(--blue);box-shadow:0 14px 30px -14px rgba(0,0,0,.55)}
+.hero .btn-primary:hover{background:var(--blue-soft)}
+.hero .btn-line{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.5)}
+.hero .btn-line:hover{background:rgba(255,255,255,.22);border-color:#fff}
+
+html{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+body{-webkit-user-select:none;-moz-user-select:none;user-select:none}
+img,a{-webkit-user-drag:none;user-drag:none}
+
+.slides{position:absolute;inset:0;z-index:-2;overflow:hidden;background:linear-gradient(135deg,#0c3aa8,#0b1f44)}
+.slide{position:absolute;inset:0;transform:translate3d(100%,0,0);transition:transform 1.25s cubic-bezier(.77,0,.18,1);will-change:transform}
+.slide.active{transform:none}
+.slide.leaving{transform:translate3d(-100%,0,0)}
+.slide .img{position:absolute;inset:0;background-size:cover;background-position:center}
+.slide.active .img,.slide.leaving .img{animation:kb 9s linear forwards}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+.dots{position:absolute;z-index:3;display:flex;gap:8px;align-items:center}
+.dots button{width:9px;height:9px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.5);cursor:pointer;transition:width .4s var(--ease),background .3s}
+.dots button.on{width:30px;background:#fff}
+.hero .dots{left:50%;bottom:22px;transform:translateX(-50%)}
+.work .dots{top:20px;right:22px}
+.btn-zalo{background:linear-gradient(135deg,#39a0ff,#0068ff);color:#fff;box-shadow:0 14px 30px -12px rgba(0,104,255,.8)}
+.btn-zalo:hover{background:linear-gradient(135deg,#1b86ff,#0050c8)}
+
+.shots-sec{background:#fff}
+.shots-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.shots-head .head{margin-bottom:0}
+.shot-nav{display:flex;gap:10px}
+.shot-nav button{
+  width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--blue);
+  cursor:pointer;display:grid;place-items:center;
+  transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease);
+}
+.shot-nav button:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.shot-nav button:active{transform:scale(.94)}
+.shot-nav svg{width:20px;height:20px}
+.shots{
+  display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:6px 2px 26px;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch;
+}
+.shots::-webkit-scrollbar{display:none}
+.shots.drag{scroll-snap-type:none;cursor:grabbing}
+.shot-card{
+  position:relative;flex:0 0 min(78%,340px);aspect-ratio:4/5;align-self:flex-start;
+  scroll-snap-align:start;border-radius:24px;overflow:hidden;isolation:isolate;
+  background:linear-gradient(135deg,#1554e6,#0b1f44);box-shadow:var(--shadow);
+}
+.shot-img{
+  position:absolute;inset:0;z-index:-2;
+  background-size:cover;background-position:center;
+  transition:transform .9s var(--ease);
+}
+.shot-card::after{
+  content:'';position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,31,68,0) 45%,rgba(8,26,72,.92) 100%);
+}
+.shot-card:hover .shot-img{transform:scale(1.07)}
+.shot-cap{position:absolute;left:0;right:0;bottom:0;padding:24px}
+.shot-cap h3{color:#fff;font-size:1.25rem;font-weight:700}
+.shot-cap p{color:#cfe0ff;font-size:.93rem}
+.shots-note{color:var(--muted);font-size:.88rem;margin-top:4px}
+@media (max-width:760px){
+  .shots{margin:0 -16px;padding:6px 16px 24px;scroll-padding-left:16px}
+  .shot-nav{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -519,7 +608,7 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
       <li><a href="#dich-vu">Dịch vụ</a></li>
       <li>
         <a class="cta" href="https://zalo.me/0368910922" target="_blank" rel="noopener">
-          <img class="zalo-img" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png" alt="Zalo" width="24" height="24" referrerpolicy="no-referrer">
+          <img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="24" height="24" referrerpolicy="no-referrer">
           Liên hệ Zalo
         </a>
       </li>
@@ -530,7 +619,16 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
 
 <main id="top">
 
-<section class="hero" data-bg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop|https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&w=1920|https://picsum.photos/id/1/1920/1080|https://picsum.photos/id/0/1920/1080|https://loremflickr.com/1920/1080/technology">
+<section class="hero">
+  <div class="slides" aria-hidden="true">
+    <div class="slide" data-slide="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop|https://picsum.photos/id/1/1920/1080|https://loremflickr.com/1920/1080/skyscraper"><div class="img"></div></div>
+    <div class="slide" data-slide="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop|https://picsum.photos/id/20/1920/1080|https://loremflickr.com/1920/1080/circuit"><div class="img"></div></div>
+    <div class="slide" data-slide="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop|https://picsum.photos/id/180/1920/1080|https://loremflickr.com/1920/1080/network"><div class="img"></div></div>
+    <div class="slide" data-slide="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1920&auto=format&fit=crop|https://picsum.photos/id/60/1920/1080|https://loremflickr.com/1920/1080/technology"><div class="img"></div></div>
+    <div class="slide" data-slide="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1920&auto=format&fit=crop|https://picsum.photos/id/48/1920/1080|https://loremflickr.com/1920/1080/computer"><div class="img"></div></div>
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="dots" data-dots></div>
   <div class="wrap hero-grid">
     <div>
       <span class="pill ev-off"><i></i>Nhận làm web theo yêu cầu, giá từ 150k</span>
@@ -539,8 +637,8 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
       <p class="lead">Thiết kế và lập trình website hiện đại, tải nhanh, hiển thị đẹp trên điện thoại, máy tính bảng và máy tính. Từ trang nhỏ đến web chuyên nghiệp cho cá nhân và doanh nghiệp.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a>
-        <a class="btn btn-line" href="https://zalo.me/0368910922" target="_blank" rel="noopener">
-          <img class="zalo-img" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">
+        <a class="btn btn-zalo" href="https://zalo.me/0368910922" target="_blank" rel="noopener">
+          <img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">
           Nhắn Zalo đặt web
         </a>
       </div>
@@ -578,10 +676,8 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
   <div class="wrap">
     <div class="head center reveal">
       <h2>Bảng giá làm web</h2>
-      <p>Chọn gói phù hợp với nhu cầu và ngân sách của bạn.</p>
+      <p>Chọn gói phù hợp với nhu cầu và ngân sách của bạn. Mọi gói đều được bảo hành và tặng kèm email.</p>
     </div>
-
-
 
     <div class="shock ev-only" hidden>
       <div class="shock-text">
@@ -589,7 +685,7 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
         <h3>Web nhỏ giảm từ <s>150k</s> còn chỉ <b>50k</b></h3>
         <p>Áp dụng từ ngày 20/09 đến hết ngày 01/10/2026</p>
       </div>
-      <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Nhận ưu đãi qua Zalo</a>
+      <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener"><img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">Nhận ưu đãi qua Zalo</a>
     </div>
 
     <div class="grid-4 snap">
@@ -603,6 +699,8 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
           <li>1 trang giới thiệu</li>
           <li>Hiển thị tốt trên điện thoại</li>
           <li>Nút liên hệ Zalo</li>
+          <li>Bảo hành 12 tháng</li>
+          <li>Tặng kèm email</li>
         </ul>
         <a class="btn btn-line" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
       </div>
@@ -616,6 +714,8 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
           <li>Giao diện đẹp, có hình ảnh</li>
           <li>Hiển thị tốt mọi thiết bị</li>
           <li>Nút liên hệ Zalo</li>
+          <li>Bảo hành 12 tháng</li>
+          <li>Tặng kèm email</li>
         </ul>
         <a class="btn btn-line" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
       </div>
@@ -629,6 +729,8 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
           <li>Hiệu ứng và ảnh nền đẹp</li>
           <li>Chức năng theo yêu cầu</li>
           <li>Hỗ trợ đưa web lên mạng</li>
+          <li>Bảo hành 12 tháng</li>
+          <li>Tặng kèm email</li>
         </ul>
         <a class="btn btn-line" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
       </div>
@@ -644,6 +746,8 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
           <li>Tối ưu tốc độ và giao diện</li>
           <li>Hỗ trợ đưa web lên mạng</li>
           <li>Hỗ trợ chỉnh sửa sau khi giao</li>
+          <li>Bảo hành 12 tháng</li>
+          <li>Tặng kèm email</li>
         </ul>
         <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
       </div>
@@ -656,67 +760,89 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
 <section class="vip" id="goi-vip" data-bg="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop|https://picsum.photos/id/1018/1920/1080|https://picsum.photos/id/1015/1920/1080|https://loremflickr.com/1920/1080/city,night">
   <div class="wrap">
     <div class="head center reveal">
+      <div class="orn"><i></i></div>
       <span class="vip-badge">Không áp dụng giảm giá</span>
-      <h2>Gói VIP kèm tên miền</h2>
-      <p>Mọi gói VIP đều kèm tên miền .com và .vn. Web thiết kế riêng, có địa chỉ riêng dễ nhớ. Giá VIP cố định.</p>
+      <h2>Gói <span class="gold">VIP</span> kèm tên miền</h2>
+      <p>Mọi gói VIP đều kèm tên miền .com và .vn, bảo hành 2 năm và tặng kèm email. Giá VIP cố định.</p>
     </div>
     <div class="grid-4 snap">
-      <div class="vcard reveal">
+                  <div class="vcard reveal">
+        <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/><line x1="6" y1="21.5" x2="18" y2="21.5"/></svg></div>
         <h3>VIP 1</h3>
         <p class="region">Khởi đầu chuyên nghiệp</p>
-        <div class="vprice">2 triệu</div>
-        <div class="regions"><span class="on">.com</span><span class="on">.vn</span></div>
-        <p class="hint">Kèm cả 2 tên miền</p>
+        <div class="vprice">2<small>triệu</small></div>
+        <div class="vline"></div>
+        <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.com</em></span></div>
+        <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.vn</em></span></div>
+        <p class="dom-cap">Tặng kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế riêng theo thương hiệu</li>
           <li>Web nhiều trang cơ bản</li>
           <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
+          <li>Bảo hành 2 năm</li>
+          <li>Tặng kèm email</li>
         </ul>
         <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
       </div>
       <div class="vcard reveal">
+        <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/><line x1="6" y1="21.5" x2="18" y2="21.5"/></svg></div>
         <h3>VIP 2</h3>
         <p class="region">Đầy đủ chức năng</p>
-        <div class="vprice">4 triệu</div>
-        <div class="regions"><span class="on">.com</span><span class="on">.vn</span></div>
-        <p class="hint">Kèm cả 2 tên miền</p>
+        <div class="vprice">4<small>triệu</small></div>
+        <div class="vline"></div>
+        <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.com</em></span></div>
+        <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.vn</em></span></div>
+        <p class="dom-cap">Tặng kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế riêng theo thương hiệu</li>
           <li>Nhiều trang, chức năng theo yêu cầu</li>
           <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
           <li>Hỗ trợ chỉnh sửa sau khi giao</li>
+          <li>Bảo hành 2 năm</li>
+          <li>Tặng kèm email</li>
         </ul>
         <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
       </div>
       <div class="vcard reveal">
+        <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/><line x1="6" y1="21.5" x2="18" y2="21.5"/></svg></div>
         <h3>VIP 3</h3>
         <p class="region">Tối ưu tìm kiếm</p>
-        <div class="vprice">5 triệu</div>
-        <div class="regions"><span class="on">.com</span><span class="on">.vn</span></div>
-        <p class="hint">Kèm cả 2 tên miền</p>
+        <div class="vprice">5<small>triệu</small></div>
+        <div class="vline"></div>
+        <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.com</em></span></div>
+        <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.vn</em></span></div>
+        <p class="dom-cap">Tặng kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế riêng, nhiều chức năng</li>
           <li>Tối ưu tốc độ và chuẩn tìm kiếm</li>
           <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
           <li>Ưu tiên hỗ trợ và chỉnh sửa</li>
+          <li>Bảo hành 2 năm</li>
+          <li>Tặng kèm email</li>
         </ul>
         <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
       </div>
       <div class="vcard top reveal">
+        <span class="v-tag">Cao cấp nhất</span>
+        <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/><line x1="6" y1="21.5" x2="18" y2="21.5"/></svg></div>
         <h3>VIP 4</h3>
         <p class="region">Cao cấp trọn gói</p>
-        <div class="vprice">10 triệu</div>
-        <div class="regions"><span class="on">.com</span><span class="on">.vn</span></div>
-        <p class="hint">Kèm cả 2 tên miền</p>
+        <div class="vprice">10<small>triệu</small></div>
+        <div class="vline"></div>
+        <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.com</em></span></div>
+        <div class="dom-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20z"/></svg><span>tenban<em>.vn</em></span></div>
+        <p class="dom-cap">Tặng kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế cao cấp, hiệu ứng riêng</li>
           <li>Chức năng theo yêu cầu, thoải mái ý tưởng</li>
           <li>Tối ưu tốc độ và chuẩn tìm kiếm</li>
           <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Ưu tiên hỗ trợ cao nhất</li>
+          <li>Bảo hành 2 năm</li>
+          <li>Tặng kèm email</li>
         </ul>
         <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
       </div>
@@ -732,10 +858,59 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
       <p>Website đang hoạt động thật. Bấm vào để xem và dùng thử.</p>
     </div>
     <div class="grid-2 one">
-      <article class="work reveal" data-bg="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop|https://picsum.photos/id/1043/1200/900|https://picsum.photos/id/1039/1200/900|https://loremflickr.com/1200/900/laboratory">
+      <article class="work reveal">
+      <div class="slides" aria-hidden="true">
+        <div class="slide" data-slide="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop|https://picsum.photos/id/1043/1200/900|https://loremflickr.com/1200/900/laboratory"><div class="img"></div></div>
+        <div class="slide" data-slide="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1200&auto=format&fit=crop|https://picsum.photos/id/1039/1200/900|https://loremflickr.com/1200/900/chemistry"><div class="img"></div></div>
+        <div class="slide" data-slide="https://images.unsplash.com/photo-1554475901-4538ddfbccc2?q=80&w=1200&auto=format&fit=crop|https://picsum.photos/id/1036/1200/900|https://loremflickr.com/1200/900/science"><div class="img"></div></div>
+        <div class="slide" data-slide="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1200&auto=format&fit=crop|https://picsum.photos/id/1035/1200/900|https://loremflickr.com/1200/900/flask"><div class="img"></div></div>
+      </div>
+      <div class="dots" data-dots></div>
         <h3>Web ôn Hóa học</h3>
         <p>Ôn tập kiến thức Hóa học gọn gàng, dễ học, dễ nhớ cho học sinh.</p>
         <a class="btn btn-white" href="https://hoangdequyxuong0-eng.github.io/Web-HO-H-C/" target="_blank" rel="noopener">Mở web ôn Hóa</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="shots-sec" id="mau-web">
+  <div class="wrap">
+    <div class="shots-head reveal">
+      <div class="head">
+        <h2>Mẫu giao diện web</h2>
+        <p>Vuốt hoặc kéo để xem thêm. Khi bạn không chạm vào, ảnh tự chuyển sang mẫu kế tiếp.</p>
+        <p class="shots-note">Hình ảnh minh họa các loại web nhận làm.</p>
+      </div>
+      <div class="shot-nav">
+        <button type="button" id="shotPrev" aria-label="Ảnh trước"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 5 8 12 15 19"/></svg></button>
+        <button type="button" id="shotNext" aria-label="Ảnh sau"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"/></svg></button>
+      </div>
+    </div>
+    <div class="shots" id="shots">
+      <article class="shot-card">
+        <div class="shot-img" data-shot="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=900&auto=format&fit=crop|https://picsum.photos/id/1/900/1100|https://loremflickr.com/900/1100/website"></div>
+        <div class="shot-cap"><h3>Web giới thiệu</h3><p>Gọn gàng, dễ xem trên điện thoại</p></div>
+      </article>
+      <article class="shot-card">
+        <div class="shot-img" data-shot="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=900&auto=format&fit=crop|https://picsum.photos/id/60/900/1100|https://loremflickr.com/900/1100/design"></div>
+        <div class="shot-cap"><h3>Landing page</h3><p>Thu hút, dẫn khách nhắn Zalo</p></div>
+      </article>
+      <article class="shot-card">
+        <div class="shot-img" data-shot="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=900&auto=format&fit=crop|https://picsum.photos/id/48/900/1100|https://loremflickr.com/900/1100/laptop"></div>
+        <div class="shot-cap"><h3>Web thống kê</h3><p>Số liệu rõ ràng, dễ theo dõi</p></div>
+      </article>
+      <article class="shot-card">
+        <div class="shot-img" data-shot="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=900&auto=format&fit=crop|https://picsum.photos/id/0/900/1100|https://loremflickr.com/900/1100/code"></div>
+        <div class="shot-cap"><h3>Lập trình theo yêu cầu</h3><p>Chức năng đúng ý bạn</p></div>
+      </article>
+      <article class="shot-card">
+        <div class="shot-img" data-shot="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=900&auto=format&fit=crop|https://picsum.photos/id/180/900/1100|https://loremflickr.com/900/1100/wireframe"></div>
+        <div class="shot-cap"><h3>Thiết kế giao diện</h3><p>Đẹp mắt, hiện đại</p></div>
+      </article>
+      <article class="shot-card">
+        <div class="shot-img" data-shot="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=900&auto=format&fit=crop|https://picsum.photos/id/3/900/1100|https://loremflickr.com/900/1100/study"></div>
+        <div class="shot-cap"><h3>Web học tập</h3><p>Nội dung dễ đọc, dễ ôn</p></div>
       </article>
     </div>
   </div>
@@ -806,7 +981,7 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
       </div>
       <div class="contact-side">
         <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">
-          <img class="zalo-img" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">
+          <img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">
           Chat Zalo: 0368910922
         </a>
         <div class="phone-line">Số Zalo: <strong>0368910922</strong></div>
@@ -835,7 +1010,7 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
     </div>
     <div class="foot-contact">
       <h4>Liên hệ</h4>
-      <a class="btn btn-primary" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Chat Zalo: 0368910922</a>
+      <a class="btn btn-zalo" href="https://zalo.me/0368910922" target="_blank" rel="noopener"><img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="26" height="26" referrerpolicy="no-referrer">Chat Zalo: 0368910922</a>
       <p>Nhắn Zalo để được tư vấn và báo giá.</p>
     </div>
   </div>
@@ -843,7 +1018,8 @@ footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
 </footer>
 
 <a class="zalo-float" href="https://zalo.me/0368910922" target="_blank" rel="noopener" aria-label="Chat Zalo 0368910922">
-  <img class="zalo-img" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png" alt="Zalo" width="62" height="62" referrerpolicy="no-referrer">
+  <img class="zalo-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" width="62" height="62" referrerpolicy="no-referrer">
+  <span class="zalo-tip"><b>Liên hệ Zalo</b><small>0368910922</small></span>
 </a>
 
 <script>
@@ -921,26 +1097,172 @@ function loadFirst(list,onOk,onFail){
   next();
 }
 
+function adapt(list){
+  if(window.innerWidth>760){return list;}
+  return list.map(function(u){
+    return u.replace(/w=(1920|1600|1200)/,'w=900').replace(/\/(1920\/1080|1600\/900|1200\/900)/,'/900/640');
+  });
+}
+
 var bgEls=document.querySelectorAll('[data-bg]');
 Array.prototype.forEach.call(bgEls,function(el){
-  var list=el.getAttribute('data-bg').split('|');
-  if(window.innerWidth<=760){
-    list=list.map(function(u){
-      return u.replace(/w=(1920|1600|1200)/,'w=900').replace(/\/(1920\/1080|1600\/900|1200\/900)/,'/900/640');
-    });
-  }
-  loadFirst(list,function(url){
+  loadFirst(adapt(el.getAttribute('data-bg').split('|')),function(url){
     el.style.setProperty('--bg','url("'+url+'")');
   });
 });
 
+function initSlider(box,dotBox,interval){
+  var slides=Array.prototype.slice.call(box.querySelectorAll('[data-slide]'));
+  var ready=[];
+  var dots=[];
+  var cur=-1;
+  var timer=null;
+
+  function go(i,instant){
+    var next=ready[i];
+    var prev=ready[cur];
+    if(prev===next){return;}
+    if(instant){next.style.transition='none';}
+    if(prev){
+      prev.classList.remove('active');
+      prev.classList.add('leaving');
+      setTimeout(function(){
+        if(prev.classList.contains('active')){return;}
+        prev.style.transition='none';
+        prev.classList.remove('leaving');
+        void prev.offsetWidth;
+        prev.style.transition='';
+      },1400);
+    }
+    next.classList.remove('leaving');
+    next.classList.add('active');
+    if(instant){
+      void next.offsetWidth;
+      next.style.transition='';
+    }
+    cur=i;
+    dots.forEach(function(d,k){d.classList.toggle('on',k===i);});
+  }
+
+  function restart(){
+    clearInterval(timer);
+    timer=setInterval(function(){
+      if(ready.length>1){go((cur+1)%ready.length);}
+    },interval);
+  }
+
+  slides.forEach(function(el){
+    loadFirst(adapt(el.getAttribute('data-slide').split('|')),function(url){
+      el.querySelector('.img').style.backgroundImage='url("'+url+'")';
+      ready.push(el);
+      var idx=ready.length-1;
+      if(dotBox){
+        var b=document.createElement('button');
+        b.type='button';
+        b.setAttribute('aria-label','Ảnh '+(idx+1));
+        b.addEventListener('click',function(){go(idx);restart();});
+        dotBox.appendChild(b);
+        dots.push(b);
+      }
+      if(ready.length===1){
+        go(0,true);
+        restart();
+      }
+    });
+  });
+}
+
+Array.prototype.forEach.call(document.querySelectorAll('.slides'),function(box){
+  initSlider(box,box.parentElement.querySelector('[data-dots]'),6000);
+});
+
+var shotBox=document.getElementById('shots');
+Array.prototype.forEach.call(shotBox.querySelectorAll('[data-shot]'),function(el){
+  loadFirst(adapt(el.getAttribute('data-shot').split('|')),function(url){
+    el.style.backgroundImage='url("'+url+'")';
+  });
+});
+
+var shotPause=0;
+var shotDown=false;
+var shotHover=false;
+var shotVisible=false;
+var shotStartX=0;
+var shotStartLeft=0;
+
+function shotStep(dir){
+  var card=shotBox.querySelector('.shot-card');
+  var gap=parseFloat(getComputedStyle(shotBox).columnGap)||20;
+  var w=card.offsetWidth+gap;
+  var max=shotBox.scrollWidth-shotBox.clientWidth;
+  if(dir>0&&shotBox.scrollLeft>=max-6){
+    shotBox.scrollTo({left:0,behavior:'smooth'});
+  }else if(dir<0&&shotBox.scrollLeft<=6){
+    shotBox.scrollTo({left:max,behavior:'smooth'});
+  }else{
+    shotBox.scrollBy({left:dir*w,behavior:'smooth'});
+  }
+}
+function shotHold(){shotPause=Date.now()+6000;}
+
+setInterval(function(){
+  if(!shotVisible||shotDown||shotHover||Date.now()<shotPause){return;}
+  shotStep(1);
+},3200);
+
+if('IntersectionObserver' in window){
+  new IntersectionObserver(function(en){shotVisible=en[0].isIntersecting;},{threshold:.25}).observe(shotBox);
+}else{
+  shotVisible=true;
+}
+
+shotBox.addEventListener('touchstart',shotHold,{passive:true});
+shotBox.addEventListener('wheel',shotHold,{passive:true});
+shotBox.addEventListener('mouseenter',function(){shotHover=true;});
+shotBox.addEventListener('mouseleave',function(){shotHover=false;});
+shotBox.addEventListener('pointerdown',function(e){
+  if(e.pointerType!=='mouse'){return;}
+  shotDown=true;
+  shotStartX=e.clientX;
+  shotStartLeft=shotBox.scrollLeft;
+  shotBox.classList.add('drag');
+  shotBox.setPointerCapture(e.pointerId);
+  shotHold();
+});
+shotBox.addEventListener('pointermove',function(e){
+  if(!shotDown){return;}
+  shotBox.scrollLeft=shotStartLeft-(e.clientX-shotStartX);
+});
+function shotRelease(){
+  if(!shotDown){return;}
+  shotDown=false;
+  shotBox.classList.remove('drag');
+  shotHold();
+}
+shotBox.addEventListener('pointerup',shotRelease);
+shotBox.addEventListener('pointercancel',shotRelease);
+document.getElementById('shotPrev').addEventListener('click',function(){shotStep(-1);shotHold();});
+document.getElementById('shotNext').addEventListener('click',function(){shotStep(1);shotHold();});
+
+var zf=document.querySelector('.zalo-float');
+setTimeout(function(){zf.classList.add('tip');},1000);
+setTimeout(function(){zf.classList.remove('tip');},9000);
+
+['contextmenu','copy','cut','dragstart','selectstart'].forEach(function(t){
+  document.addEventListener(t,function(e){e.preventDefault();});
+});
+document.addEventListener('keydown',function(e){
+  var k=(e.key||'').toLowerCase();
+  if((e.ctrlKey||e.metaKey)&&(k==='c'||k==='x'||k==='a')){e.preventDefault();}
+});
+
 var ZALO=[
+  'https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg',
   'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png',
   'https://fastly.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png',
   'https://gcore.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png',
   'https://raw.githubusercontent.com/homarr-labs/dashboard-icons/main/png/zalo.png',
   'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zalo.svg',
-  'https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg',
   'https://cdn.simpleicons.org/zalo'
 ];
 var zaloImgs=document.querySelectorAll('.zalo-img');
@@ -978,7 +1300,7 @@ if('IntersectionObserver' in window){
 </script>
 
 <script>
-var SLOTS=[45,60,30,10,1,5,15,20,25,35,50,40];
+var SLOTS=[20,15,10,5,5,10,15,20,15,10,20,15];
 var EV_START=Date.UTC(2026,8,20,0,0,0)-7*3600000;
 var EV_END=Date.UTC(2026,9,1,23,59,59)-7*3600000;
 var lastKey='';
