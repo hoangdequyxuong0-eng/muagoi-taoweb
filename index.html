@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#1554e6">
+<meta property="og:title" content="Nhận Lập Trình Uy Tín Chất Lượng">
+<meta property="og:description" content="Nhận làm web theo yêu cầu, giá từ 150k. Liên hệ Zalo 0368910922.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231554e6'/%3E%3Cpath d='M24 22l-10 10 10 10M40 22l10 10-10 10' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 <title>Nhận Lập Trình Uy Tín Chất Lượng</title>
 <meta name="description" content="Nhận Lập Trình Uy Tín Chất Lượng - Nhận làm web theo yêu cầu, giá từ 150k. Liên hệ Zalo 0368910922.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -291,11 +297,6 @@ section{padding:100px 0}
 .phone-line{text-align:center;color:#d4e4ff;font-size:.95rem}
 .phone-line strong{color:#fff;font-size:1.2rem;letter-spacing:.02em}
 
-footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--blue-mist)}
-.foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;color:var(--muted);font-size:.93rem}
-.foot nav{display:flex;flex-wrap:wrap;gap:22px}
-.foot a{color:var(--blue);font-weight:500}
-.foot a:hover{color:var(--blue-dark);text-decoration:underline}
 
 .zalo-float{
   position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:120;
@@ -354,7 +355,6 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
   .work{min-height:380px;padding:28px}
   .contact{padding:64px 0}
   .contact-box{padding:34px 24px;border-radius:24px}
-  .foot{flex-direction:column;align-items:flex-start}
   .zalo-float{width:56px;height:56px}
 }
 
@@ -383,7 +383,6 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
   position:relative;display:flex;flex-direction:column;
   padding:34px 26px;border-radius:24px;
   background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
   transition:transform .35s var(--ease),border-color .35s,box-shadow .35s var(--ease);
 }
 .vcard:hover{transform:translateY(-8px);border-color:#f5b942;box-shadow:0 26px 60px -26px rgba(245,185,66,.55)}
@@ -431,6 +430,70 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
   .shock{flex-direction:column;align-items:flex-start;padding:24px 20px;border-radius:22px;gap:18px;margin-bottom:28px}
   .shock .btn{width:100%}
 }
+
+.progress{position:absolute;left:0;bottom:-1px;height:3px;width:100%;background:linear-gradient(90deg,var(--blue),var(--sky));transform:scaleX(0);transform-origin:left;pointer-events:none}
+
+.hero{overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero::before,.hero::after{content:'';position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
+.hero::before{width:420px;height:420px;right:-80px;top:40px;background:rgba(56,160,255,.32);animation:drift 12s ease-in-out infinite alternate}
+.hero::after{width:320px;height:320px;left:-100px;bottom:-60px;background:rgba(21,84,230,.16);animation:drift 15s ease-in-out infinite alternate-reverse}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-40px,30px,0)}}
+.grad{
+  background:linear-gradient(120deg,var(--blue) 0%,var(--sky) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+}
+.float-badge{
+  position:absolute;z-index:3;display:flex;flex-direction:column;
+  padding:12px 16px;border-radius:16px;background:#fff;
+  border:1px solid var(--line);box-shadow:var(--shadow);
+  animation:bob 5s ease-in-out infinite alternate;
+}
+.float-badge b{color:var(--navy);font-size:.95rem;line-height:1.3}
+.float-badge span{color:var(--muted);font-size:.8rem;line-height:1.3}
+.fb1{top:-20px;left:-26px}
+.fb2{bottom:24px;left:-34px;animation-delay:-2.5s}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-8px)}}
+
+.btn:active{transform:scale(.97)}
+.btn-primary{background:linear-gradient(135deg,#2f74ff 0%,#1554e6 100%)}
+.btn-primary:hover{background:linear-gradient(135deg,#1554e6 0%,#0c3aa8 100%)}
+.btn-gold{background:linear-gradient(135deg,#ffcd66 0%,#f5b942 100%)}
+.btn-gold:hover{background:linear-gradient(135deg,#ffd982 0%,#ffc14f 100%)}
+.step::before{background:linear-gradient(135deg,var(--blue),var(--sky));box-shadow:var(--shadow-sm)}
+.step{transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.step:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+
+.swipe-hint{display:none}
+
+footer{background:var(--navy);color:#a9c0e8;padding:64px 0 0;border-top:0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.1fr;gap:40px;padding-bottom:46px}
+.foot-brand .brand{color:#fff;margin-bottom:14px}
+.foot-brand p{max-width:340px;font-size:.95rem}
+footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:14px}
+.foot-links a{display:block;padding:5px 0;color:#a9c0e8;transition:color .2s}
+.foot-links a:hover{color:#fff}
+.foot-contact .btn{width:100%;max-width:300px}
+.foot-contact p{margin-top:12px;font-size:.93rem}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding:20px 0 calc(20px + env(safe-area-inset-bottom,0px));font-size:.88rem;color:#7f97c4}
+
+@media (max-width:760px){
+  .hero::before,.hero::after{display:none}
+  .float-badge{display:none}
+  .grid-4.snap{
+    display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:16px;
+    gap:14px;margin:0 -16px;padding:26px 16px 30px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .grid-4.snap::-webkit-scrollbar{display:none}
+  .grid-4.snap>*{flex:0 0 84%;scroll-snap-align:start}
+  .swipe-hint{display:block;text-align:center;color:var(--muted);font-size:.88rem;margin-top:-6px}
+  .vip .swipe-hint{color:#93aad3}
+  .plan:hover,.vcard:hover{transform:none}
+  .foot-grid{grid-template-columns:1fr;gap:30px}
+  footer{padding-top:52px}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -462,6 +525,7 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
       </li>
     </ul>
   </div>
+  <div class="progress" id="progress"></div>
 </header>
 
 <main id="top">
@@ -471,7 +535,7 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
     <div>
       <span class="pill ev-off"><i></i>Nhận làm web theo yêu cầu, giá từ 150k</span>
       <a class="pill pill-hot ev-only" href="#bang-gia" hidden><i></i>Ưu đãi sốc: web nhỏ chỉ 50k, từ 20/09 đến 01/10</a>
-      <h1>Nhận Lập Trình Uy Tín Chất Lượng</h1>
+      <h1>Nhận Lập Trình <span class="grad">Uy Tín Chất Lượng</span></h1>
       <p class="lead">Thiết kế và lập trình website hiện đại, tải nhanh, hiển thị đẹp trên điện thoại, máy tính bảng và máy tính. Từ trang nhỏ đến web chuyên nghiệp cho cá nhân và doanh nghiệp.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#bang-gia">Xem bảng giá</a>
@@ -489,6 +553,8 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
     </div>
 
     <div class="devices" aria-label="Xem trước website đã thực hiện">
+      <div class="float-badge fb1"><b>Mọi thiết bị</b><span>Điện thoại, máy tính</span></div>
+      <div class="float-badge fb2"><b>Tải nhanh, chạy mượt</b><span>Code gọn nhẹ</span></div>
       <div class="laptop">
         <div class="laptop-screen">
           <div class="screen fill">
@@ -526,7 +592,7 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
       <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Nhận ưu đãi qua Zalo</a>
     </div>
 
-    <div class="grid-4">
+    <div class="grid-4 snap">
       <div class="plan reveal" data-base="150000" data-event="50000">
         <span class="tag tag-ev ev-only" hidden>Ưu đãi sốc</span>
         <h3>Web nhỏ</h3>
@@ -582,6 +648,7 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
         <a class="btn btn-white" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói này</a>
       </div>
     </div>
+    <p class="swipe-hint">Vuốt ngang để xem thêm gói</p>
     <p class="note">Gói VIP có giá cố định.</p>
   </div>
 </section>
@@ -590,49 +657,49 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
   <div class="wrap">
     <div class="head center reveal">
       <span class="vip-badge">Không áp dụng giảm giá</span>
-      <h2>Gói VIP kèm vùng miền</h2>
-      <p>Web thiết kế riêng, nội dung và hình ảnh đúng theo vùng miền bạn cần phủ. Giá VIP cố định.</p>
+      <h2>Gói VIP kèm tên miền</h2>
+      <p>Mọi gói VIP đều kèm tên miền .com và .vn. Web thiết kế riêng, có địa chỉ riêng dễ nhớ. Giá VIP cố định.</p>
     </div>
-    <div class="grid-4">
+    <div class="grid-4 snap">
       <div class="vcard reveal">
         <h3>VIP 1</h3>
-        <p class="region">Kèm 1 vùng miền</p>
+        <p class="region">Khởi đầu chuyên nghiệp</p>
         <div class="vprice">2 triệu</div>
-        <div class="regions"><span>Miền Bắc</span><span>Miền Trung</span><span>Miền Nam</span></div>
-        <p class="hint">Chọn 1 trong 3 miền</p>
+        <div class="regions"><span class="on">.com</span><span class="on">.vn</span></div>
+        <p class="hint">Kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế riêng theo thương hiệu</li>
-          <li>Nội dung, hình ảnh theo vùng miền đã chọn</li>
-          <li>Nhiều trang, chức năng theo yêu cầu</li>
+          <li>Web nhiều trang cơ bản</li>
+          <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
         </ul>
         <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
       </div>
       <div class="vcard reveal">
         <h3>VIP 2</h3>
-        <p class="region">Kèm 2 vùng miền</p>
+        <p class="region">Đầy đủ chức năng</p>
         <div class="vprice">4 triệu</div>
-        <div class="regions"><span>Miền Bắc</span><span>Miền Trung</span><span>Miền Nam</span></div>
-        <p class="hint">Chọn 2 trong 3 miền</p>
+        <div class="regions"><span class="on">.com</span><span class="on">.vn</span></div>
+        <p class="hint">Kèm cả 2 tên miền</p>
         <ul>
           <li>Thiết kế riêng theo thương hiệu</li>
-          <li>Nội dung, hình ảnh cho 2 vùng miền</li>
           <li>Nhiều trang, chức năng theo yêu cầu</li>
+          <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
-          <li>Ưu tiên hỗ trợ và chỉnh sửa</li>
+          <li>Hỗ trợ chỉnh sửa sau khi giao</li>
         </ul>
         <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
       </div>
       <div class="vcard reveal">
         <h3>VIP 3</h3>
-        <p class="region">Kèm cả 3 vùng miền</p>
+        <p class="region">Tối ưu tìm kiếm</p>
         <div class="vprice">5 triệu</div>
-        <div class="regions"><span class="on">Miền Bắc</span><span class="on">Miền Trung</span><span class="on">Miền Nam</span></div>
-        <p class="hint">Bắc, Trung, Nam đầy đủ</p>
+        <div class="regions"><span class="on">.com</span><span class="on">.vn</span></div>
+        <p class="hint">Kèm cả 2 tên miền</p>
         <ul>
-          <li>Thiết kế riêng theo thương hiệu</li>
-          <li>Nội dung, hình ảnh cho cả 3 miền</li>
-          <li>Nhiều trang, chức năng theo yêu cầu</li>
+          <li>Thiết kế riêng, nhiều chức năng</li>
+          <li>Tối ưu tốc độ và chuẩn tìm kiếm</li>
+          <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Hỗ trợ đưa web lên mạng</li>
           <li>Ưu tiên hỗ trợ và chỉnh sửa</li>
         </ul>
@@ -640,20 +707,21 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
       </div>
       <div class="vcard top reveal">
         <h3>VIP 4</h3>
-        <p class="region">Kèm toàn quốc</p>
+        <p class="region">Cao cấp trọn gói</p>
         <div class="vprice">10 triệu</div>
-        <div class="regions"><span class="on">Toàn quốc</span></div>
-        <p class="hint">Phủ mọi vùng miền cả nước</p>
+        <div class="regions"><span class="on">.com</span><span class="on">.vn</span></div>
+        <p class="hint">Kèm cả 2 tên miền</p>
         <ul>
-          <li>Thiết kế riêng cao cấp theo thương hiệu</li>
-          <li>Nội dung, hình ảnh toàn quốc</li>
-          <li>Nhiều trang, chức năng không giới hạn ý tưởng</li>
-          <li>Hỗ trợ đưa web lên mạng</li>
+          <li>Thiết kế cao cấp, hiệu ứng riêng</li>
+          <li>Chức năng theo yêu cầu, thoải mái ý tưởng</li>
+          <li>Tối ưu tốc độ và chuẩn tìm kiếm</li>
+          <li>Hỗ trợ trỏ tên miền về web</li>
           <li>Ưu tiên hỗ trợ cao nhất</li>
         </ul>
         <a class="btn btn-gold" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Đặt gói VIP</a>
       </div>
     </div>
+    <p class="swipe-hint">Vuốt ngang để xem thêm gói</p>
   </div>
 </section>
 
@@ -750,13 +818,28 @@ footer{padding:38px 0 calc(38px + env(safe-area-inset-bottom,0px));border-top:1p
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <div>&copy; 2026 Nhận Lập Trình Uy Tín Chất Lượng</div>
-    <nav>
-      <a href="https://hoangdequyxuong0-eng.github.io/Web-HO-H-C/" target="_blank" rel="noopener">Web ôn Hóa</a>
-      <a href="https://zalo.me/0368910922" target="_blank" rel="noopener">Zalo 0368910922</a>
-    </nav>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a href="#top" class="brand">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14" y1="5" x2="10" y2="19"/></svg></span>
+        <span>Nhận Lập Trình</span>
+      </a>
+      <p>Uy tín, chất lượng. Nhận làm web theo yêu cầu cho cá nhân và doanh nghiệp.</p>
+    </div>
+    <div class="foot-links">
+      <h4>Liên kết</h4>
+      <a href="#bang-gia">Bảng giá</a>
+      <a href="#goi-vip">Gói VIP</a>
+      <a href="#website">Web đã làm</a>
+      <a href="#dich-vu">Dịch vụ</a>
+    </div>
+    <div class="foot-contact">
+      <h4>Liên hệ</h4>
+      <a class="btn btn-primary" href="https://zalo.me/0368910922" target="_blank" rel="noopener">Chat Zalo: 0368910922</a>
+      <p>Nhắn Zalo để được tư vấn và báo giá.</p>
+    </div>
   </div>
+  <div class="wrap copy">&copy; 2026 Nhận Lập Trình Uy Tín Chất Lượng</div>
 </footer>
 
 <a class="zalo-float" href="https://zalo.me/0368910922" target="_blank" rel="noopener" aria-label="Chat Zalo 0368910922">
@@ -781,8 +864,11 @@ menu.addEventListener('click',function(e){
   }
 });
 
+var prog=document.getElementById('progress');
 function onScroll(){
   bar.classList.toggle('scrolled',window.scrollY>8);
+  var max=document.documentElement.scrollHeight-window.innerHeight;
+  prog.style.transform='scaleX('+(max>0?Math.min(1,window.scrollY/max):0)+')';
 }
 window.addEventListener('scroll',onScroll,{passive:true});
 onScroll();
@@ -838,6 +924,11 @@ function loadFirst(list,onOk,onFail){
 var bgEls=document.querySelectorAll('[data-bg]');
 Array.prototype.forEach.call(bgEls,function(el){
   var list=el.getAttribute('data-bg').split('|');
+  if(window.innerWidth<=760){
+    list=list.map(function(u){
+      return u.replace(/w=(1920|1600|1200)/,'w=900').replace(/\/(1920\/1080|1600\/900|1200\/900)/,'/900/640');
+    });
+  }
   loadFirst(list,function(url){
     el.style.setProperty('--bg','url("'+url+'")');
   });
